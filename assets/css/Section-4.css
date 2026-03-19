@@ -3,73 +3,98 @@
 ========================= */
 
 #aei-courses {
-    padding: 50px 8%;
+    padding: 30px 6% 20px; /* top reduced, bottom tighter */
     background: #f7f9fc;
 }
 
+/* CONTAINER */
+
 .aei-courses-container {
-    max-width: 1100px; /* thoda tight kiya for better 3x3 */
-    margin: auto;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 /* =========================
    HEADER
 ========================= */
 
-/* =========================
-   HEADING STYLE
-========================= */
-
-.aei-courses-title {
-    font-size: 42px;       /* size bada */
-    font-weight: 700;
-    color: #104C80;        /* blue color */
-    font-family: "Poppins", sans-serif;
-    line-height: 1.3;
-}
-
 .aei-courses-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 18px; /* reduced gap below heading */
+}
+
+/* HEADING */
+
+.aei-courses-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #104C80;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.2;
+    margin: 0; /* remove default margin */
 }
 
 /* =========================
-   GRID (FORCE 3x3)
+   GRID (3x3)
 ========================= */
 
 .aei-courses-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 16px; /* tighter grid */
 }
 
 /* =========================
-   CARD (CONTROL HEIGHT)
+   CARD
 ========================= */
 
 .aei-course-card {
     background: #ffffff;
-    padding: 20px 18px;
+    padding: 16px 14px;
     border-radius: 12px;
     text-align: center;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.35s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 
-    min-height: 200px; /* important */
+    min-height: 180px; /* balanced height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical alignment fix */
 }
 
 /* =========================
-   ICON (FIX MAIN ISSUE)
+   ICON
 ========================= */
 
+.aei-course-icon {
+    margin-bottom: 8px;
+}
+
 .aei-course-icon img {
-    width: 60px;   /* pehle 70px tha */
-    height: 60px;
+    width: 52px;
+    height: 52px;
     object-fit: contain;
     transition: transform 0.3s ease;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.aei-course-card h3 {
+    font-size: 17px;
+    margin: 6px 0;
+    color: #1f2d3d;
+}
+
+.aei-course-card p {
+    font-size: 13px;
+    color: #5f6c7b;
+    line-height: 1.4;
+    margin: 0; /* remove extra bottom space */
 }
 
 /* =========================
@@ -77,12 +102,20 @@
 ========================= */
 
 .aei-course-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.08);
+}
+
+.aei-course-card:hover h3 {
+    color: #104C80;
+}
+
+.aei-course-card:hover .aei-course-icon img {
+    transform: scale(1.08);
 }
 
 /* =========================
-   BLUE OVERLAY
+   OVERLAY
 ========================= */
 
 .aei-course-card::before {
@@ -91,8 +124,8 @@
     inset: 0;
     background: linear-gradient(
         120deg,
-        rgba(16, 76, 128, 0.12),
-        rgba(16, 76, 128, 0.04)
+        rgba(16, 76, 128, 0.10),
+        rgba(16, 76, 128, 0.03)
     );
     opacity: 0;
     transition: 0.3s;
@@ -109,15 +142,15 @@
 .aei-course-card::after {
     content: "";
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background: radial-gradient(
         circle,
-        rgba(16, 76, 128, 0.2),
+        rgba(16, 76, 128, 0.18),
         transparent 70%
     );
-    top: -30px;
-    right: -30px;
+    top: -25px;
+    right: -25px;
     opacity: 0;
     transition: 0.3s;
 }
@@ -125,65 +158,6 @@
 .aei-course-card:hover::after {
     opacity: 1;
 }
-
-/* =========================
-   TEXT
-========================= */
-
-.aei-course-card h3 {
-    font-size: 18px;
-    margin: 8px 0;
-    color: #1f2d3d;
-}
-
-.aei-course-card p {
-    font-size: 13px;
-    color: #5f6c7b;
-    line-height: 1.5;
-}
-
-.aei-course-card:hover h3 {
-    color: #104C80;
-}
-
-/* =========================
-   TABLET (≤ 992px)
-========================= */
-
-@media (max-width: 992px) {
-
-    .aei-courses {
-        padding: 40px 6%;
-    }
-
-    .aei-courses-title {
-        font-size: 34px;
-    }
-
-    .aei-courses-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 column */
-        gap: 18px;
-    }
-
-    .aei-course-card {
-        min-height: 180px;
-        padding: 18px;
-    }
-
-    .aei-course-card h3 {
-        font-size: 17px;
-    }
-
-    .aei-course-card p {
-        font-size: 13px;
-    }
-
-    .aei-course-icon img {
-        width: 55px;
-        height: 55px;
-    }
-}
-
 
 /* =========================
    MOBILE (≤ 576px)
@@ -196,37 +170,37 @@
     }
 
     .aei-courses-header {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
     .aei-courses-title {
         font-size: 26px;
-        line-height: 1.4;
+        line-height: 1.3;
     }
 
     .aei-courses-grid {
-        grid-template-columns: 1fr; /* single column */
-        gap: 15px;
+        grid-template-columns: repeat(2, 1fr); /* ✅ FIX: 2 columns */
+        gap: 12px;
     }
 
     .aei-course-card {
-        min-height: auto; /* allow natural height */
-        padding: 16px;
+        min-height: 150px;
+        padding: 12px;
         border-radius: 10px;
     }
 
     .aei-course-icon img {
-        width: 50px;
-        height: 50px;
+        width: 42px;
+        height: 42px;
     }
 
     .aei-course-card h3 {
-        font-size: 16px;
-        margin: 6px 0;
+        font-size: 14px;
+        margin: 5px 0;
     }
 
     .aei-course-card p {
-        font-size: 12.5px;
-        line-height: 1.4;
+        font-size: 11.5px;
+        line-height: 1.3;
     }
 }

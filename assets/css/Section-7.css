@@ -3,23 +3,26 @@
 ========================= */
 
 #aei-reviews {
-    padding: 50px 0;
+    padding: 30px 0 50px;
     background: #f7f9fc;
     overflow: hidden;
 }
 
-/* header */
+/* =========================
+   HEADER
+========================= */
 
 .aei-reviews-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .aei-reviews-header h2 {
-    font-size: 34px;
+    font-size: 32px;
     color: #BC2F25;
-;
+    margin-bottom: 5px;
 }
+
 
 /* =========================
    SLIDER
@@ -34,65 +37,78 @@
 
 .aei-reviews-track {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     width: max-content;
-    animation: aei-scroll 25s linear infinite;
+    animation: aei-scroll 30s linear infinite;
 }
 
-/* infinite animation */
+/* pause on hover (desktop only useful) */
+
+.aei-reviews-slider:hover .aei-reviews-track {
+    animation-play-state: paused;
+}
+
+/* animation */
 
 @keyframes aei-scroll {
-    from {
+    0% {
         transform: translateX(0);
     }
-    to {
+    100% {
         transform: translateX(-50%);
     }
 }
+
 
 /* =========================
    CARD
 ========================= */
 
 .aei-review-card {
-    min-width: 260px;
-    max-width: 260px;
+    flex: 0 0 auto;
+    width: 250px;
     background: #fff;
     padding: 18px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    transition: 0.3s ease;
 }
 
-/* top */
+.aei-review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
 
 .aei-review-top img {
-    width: 30px;
-    height: auto;
+    width: 28px;
     margin-bottom: 10px;
 }
-
-/* text */
 
 .aei-review-card p {
     font-size: 13px;
     color: #5f6c7b;
-    margin-bottom: 15px;
+    line-height: 1.6;
+    margin-bottom: 14px;
 }
-
-/* bottom */
 
 .aei-review-bottom h4 {
     font-size: 14px;
     margin-bottom: 4px;
     color: #1f2d3d;
+    font-weight: 600;
 }
-
-/* stars */
 
 .aei-stars {
-    color: #fbbc04; /* google yellow */
-    font-size: 14px;
+    color: #fbbc04;
+    font-size: 13px;
 }
+
 
 /* =========================
    TABLET (≤ 992px)
@@ -101,22 +117,66 @@
 @media (max-width: 992px) {
 
     #aei-reviews {
-        padding: 45px 0;
+        padding: 25px 0 45px;
     }
 
     .aei-reviews-header h2 {
         font-size: 28px;
     }
 
+    .aei-review-card {
+        width: 220px;
+        padding: 16px;
+    }
+
     .aei-reviews-track {
-        gap: 18px;
-        animation: aei-scroll 30s linear infinite; /* slower for tablet */
+        animation-duration: 35s;
+    }
+}
+
+
+/* =========================
+   MOBILE (≤ 768px)
+========================= */
+
+@media (max-width: 768px) {
+
+    /* 🔥 switch to scroll mode */
+    .aei-reviews-slider {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .aei-reviews-track {
+        animation: none; /* disable auto scroll */
+        padding: 0 5%;
     }
 
     .aei-review-card {
-        min-width: 230px;
-        max-width: 230px;
-        padding: 16px;
+        width: 200px;
+        scroll-snap-align: start;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE (≤ 576px)
+========================= */
+
+@media (max-width: 576px) {
+
+    #aei-reviews {
+        padding: 20px 0 40px;
+    }
+
+    .aei-reviews-header h2 {
+        font-size: 24px;
+    }
+
+    .aei-review-card {
+        width: 180px;
+        padding: 14px;
     }
 
     .aei-review-card p {
@@ -124,63 +184,26 @@
     }
 
     .aei-review-bottom h4 {
-        font-size: 13.5px;
-    }
-
-    .aei-stars {
         font-size: 13px;
     }
 
-    .aei-review-top img {
-        width: 26px;
+    .aei-stars {
+        font-size: 12px;
     }
 }
 
 
 /* =========================
-   MOBILE (≤ 576px)
+   EXTRA SMALL (≤ 400px)
 ========================= */
 
-@media (max-width: 576px) {
+@media (max-width: 400px) {
 
-    #aei-reviews {
-        padding: 40px 0;
-    }
-
-    .aei-reviews-header {
-        margin-bottom: 20px;
+    .aei-review-card {
+        width: 160px;
     }
 
     .aei-reviews-header h2 {
         font-size: 22px;
-    }
-
-    .aei-reviews-track {
-        gap: 15px;
-        animation: aei-scroll 35s linear infinite; /* slower for readability */
-    }
-
-    .aei-review-card {
-        min-width: 200px;
-        max-width: 200px;
-        padding: 14px;
-        border-radius: 10px;
-    }
-
-    .aei-review-card p {
-        font-size: 12px;
-        line-height: 1.5;
-    }
-
-    .aei-review-bottom h4 {
-        font-size: 13px;
-    }
-
-    .aei-stars {
-        font-size: 12px;
-    }
-
-    .aei-review-top img {
-        width: 24px;
     }
 }

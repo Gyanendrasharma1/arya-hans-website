@@ -4,8 +4,12 @@
 
 #aei-why-us {
     position: relative;
-    padding: 40px 8% 120px;
-    background: #ffffff;
+    padding: 60px 8% 130px;
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(6, 128, 169, 0.04) 100%
+    );
 }
 
 /* container */
@@ -14,8 +18,8 @@
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
     align-items: center;
 }
 
@@ -24,40 +28,60 @@
 ========================= */
 
 .aei-why-title {
-    font-size: 38px;
+    font-size: 40px;
     font-weight: 700;
-    color: #104C80; /* dark blue */
-    margin-bottom: 20px;
+    color: #104C80;
+    margin-bottom: 18px;
     font-family: "Poppins", sans-serif;
+    line-height: 1.2;
 }
 
 .aei-why-desc {
     font-size: 15px;
-    color: #104C80; /* switched from gray → brand consistency */
+    color: #104C80;
     opacity: 0.75;
-    line-height: 1.7;
-    margin-bottom: 15px;
+    line-height: 1.8;
+    margin-bottom: 12px;
     font-family: "Open Sans", sans-serif;
 }
 
 /* highlight */
 
 .aei-why-highlight {
-    margin-top: 25px;
-    padding: 20px;
-    background: rgba(6, 128, 169, 0.08); /* light blue tint */
-    border-left: 4px solid #BC2F25; /* maroon */
-    border-radius: 8px;
+    margin-top: 30px;
+    padding: 22px 22px;
+    background: linear-gradient(
+        135deg,
+        rgba(6, 128, 169, 0.12),
+        rgba(6, 128, 169, 0.05)
+    );
+    border-left: 5px solid #BC2F25;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.aei-why-highlight::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    background: rgba(6, 128, 169, 0.15);
+    border-radius: 50%;
 }
 
 .aei-why-highlight h3 {
-    font-size: 20px;
+    font-size: 21px;
     color: #104C80;
+    margin-bottom: 5px;
 }
 
 .aei-why-highlight span {
     font-size: 13px;
-    color: #BC2F25; /* maroon highlight */
+    color: #BC2F25;
+    font-weight: 600;
 }
 
 
@@ -68,32 +92,62 @@
 .aei-why-features {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 22px;
 }
 
 .aei-why-card {
-    background: rgba(6, 128, 169, 0.06); /* subtle light blue */
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s ease;
+    background: linear-gradient(
+        135deg,
+        rgba(6, 128, 169, 0.08),
+        rgba(6, 128, 169, 0.03)
+    );
+    padding: 22px;
+    border-radius: 14px;
+    transition: all 0.35s ease;
     border: 1px solid rgba(6, 128, 169, 0.15);
+    position: relative;
+    overflow: hidden;
 }
 
+/* subtle glow effect */
+
+.aei-why-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(6, 128, 169, 0.15),
+        transparent
+    );
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* hover */
+
 .aei-why-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(16, 76, 128, 0.15); /* dark blue shadow */
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(16, 76, 128, 0.18);
+}
+
+.aei-why-card:hover::before {
+    opacity: 1;
 }
 
 .aei-why-card h4 {
     font-size: 16px;
-    margin-bottom: 6px;
-    color: #104C80; /* dark blue */
+    margin-bottom: 8px;
+    color: #104C80;
+    font-weight: 600;
 }
 
 .aei-why-card p {
     font-size: 13px;
     color: #104C80;
     opacity: 0.7;
+    line-height: 1.6;
 }
 
 
@@ -111,13 +165,12 @@
 
 .aei-why-divider svg {
     width: 100%;
-    height: 100px;
+    height: 110px;
 }
 
 .aei-why-divider path {
-    fill: #0680A9; /* light blue divider */
+    fill: #0680A9;
 }
-
 /* =========================
    TABLET (≤ 992px)
 ========================= */

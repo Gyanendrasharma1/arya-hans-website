@@ -1,37 +1,54 @@
 /* =========================
+   GLOBAL TYPOGRAPHY
+========================= */
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #0f172a;
+}
+
+
+/* =========================
    BREADCRUMB
 ========================= */
 
 .aei-adv-breadcrumb {
     max-width: 1200px;
-    margin: 20px auto 30px;
-    padding: 12px 18px;
-    background: rgba(6, 128, 169, 0.08);
-    border-radius: 8px;
+    margin: 15px auto 20px;
+    padding: 10px 16px;
+    background: rgba(6, 128, 169, 0.06);
+    border-radius: 6px;
 }
 
 .aei-adv-breadcrumb-list {
     display: flex;
     align-items: center;
-    list-style: none;
+    flex-wrap: wrap;
     gap: 6px;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .aei-adv-breadcrumb-item a {
     text-decoration: none;
-    font-size: 14px;
-    font-family: "Poppins", open serif;
+    font-size: 13px;
+    font-weight: 500;
     color: #0680A9;
+    transition: color 0.25s ease;
+}
+
+.aei-adv-breadcrumb-item a:hover {
+    color: #104C80;
 }
 
 .aei-adv-breadcrumb-separator {
-    color: #104C80;
-    opacity: 0.6;
+    font-size: 12px;
+    color: #64748b;
 }
 
 .aei-adv-breadcrumb-item.active {
+    font-size: 13px;
     font-weight: 600;
     color: #BC2F25;
 }
@@ -42,7 +59,7 @@
 ========================= */
 
 #aei-adv-syllabus {
-    padding: 80px 8%;
+    padding: 50px 6%;
     background: #f7f9fc;
 }
 
@@ -51,41 +68,52 @@
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 40px;
     align-items: center;
 }
 
 
-/* LEFT CONTENT */
+/* =========================
+   LEFT CONTENT
+========================= */
 
 .aei-adv-content {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 14px;
 }
 
 .aei-adv-title {
-    font-family: "Poppins", sans-serif;
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 700;
+    line-height: 1.3;
     color: #0f172a;
 }
 
 .aei-adv-desc {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     color: #475569;
-    line-height: 1.7;
+    line-height: 1.6;
+    max-width: 520px;
 }
 
 
-/* RIGHT IMAGE */
+/* =========================
+   RIGHT IMAGE
+========================= */
 
 .aei-adv-image img {
     width: 100%;
-    border-radius: 14px;
+    height: 100%;
+    max-height: 320px;
     object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.aei-adv-image img:hover {
+    transform: scale(1.02);
 }
 
 
@@ -94,7 +122,7 @@
 ========================= */
 
 #aei-adv-pdf {
-    padding: 80px 8%;
+    padding: 50px 6%;
     background: #ffffff;
 }
 
@@ -104,28 +132,27 @@
 }
 
 .aei-adv-pdf-title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
     color: #BC2F25;
-    font-family: "Montserrat", sans-serif;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .aei-adv-pdf-line {
-    width: 90px;
+    width: 70px;
     height: 3px;
     background: #0680A9;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .aei-adv-pdf-viewer {
     width: 100%;
-    height: 650px;
-    border-radius: 12px;
+    height: 600px;
+    border-radius: 10px;
     overflow: hidden;
-    background: #fff;
+    background: #ffffff;
     border: 1px solid rgba(16, 76, 128, 0.08);
-    box-shadow: 0 15px 40px rgba(16, 76, 128, 0.12);
+    box-shadow: 0 10px 30px rgba(16, 76, 128, 0.10);
 }
 
 .aei-adv-pdf-viewer iframe {
@@ -133,96 +160,105 @@
     height: 100%;
     border: none;
 }
-
 /* =========================
    TABLET (≤ 992px)
 ========================= */
 
 @media (max-width: 992px) {
 
-    .aei-adv-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
+    #aei-adv-syllabus {
+        padding: 40px 5%;
     }
 
-    /* Image comes first (better UX) */
+    .aei-adv-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Image on top */
     .aei-adv-image {
         order: -1;
     }
 
     .aei-adv-title {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .aei-adv-desc {
-        font-size: 15px;
+        font-size: 14px;
+    }
+
+    /* PDF Section */
+    #aei-adv-pdf {
+        padding: 40px 5%;
+    }
+
+    .aei-adv-pdf-title {
+        font-size: 24px;
     }
 
     .aei-adv-pdf-viewer {
-        height: 520px;
+        height: 500px;
     }
 }
 
 
 /* =========================
-   MOBILE (≤ 600px)
+   MOBILE (≤ 576px)
 ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
 
-    /* Breadcrumb tighter */
+    /* Breadcrumb */
     .aei-adv-breadcrumb {
-        margin: 15px auto 20px;
-        padding: 10px 14px;
+        margin: 10px auto 15px;
+        padding: 8px 12px;
     }
 
-    .aei-adv-breadcrumb-list {
-        flex-wrap: wrap;
-        gap: 4px;
+    .aei-adv-breadcrumb-item a {
+        font-size: 12px;
     }
 
-    .aei-adv-breadcrumb-item a,
-    .aei-adv-breadcrumb-item.active {
-        font-size: 13px;
-    }
-
-    /* Section spacing */
+    /* Syllabus Section */
     #aei-adv-syllabus {
-        padding: 60px 5%;
+        padding: 30px 4%;
     }
 
-    #aei-adv-pdf {
-        padding: 60px 5%;
+    .aei-adv-container {
+        gap: 24px;
     }
 
-    /* Typography scaling */
     .aei-adv-title {
-        font-size: 26px;
-        line-height: 1.3;
+        font-size: 22px;
     }
 
     .aei-adv-desc {
-        font-size: 14px;
-        line-height: 1.6;
+        font-size: 13.5px;
+        line-height: 1.5;
     }
 
-    /* Image polish */
+    /* Image */
     .aei-adv-image img {
+        max-height: 220px;
         border-radius: 10px;
     }
 
-    /* PDF section */
+    /* PDF Section */
+    #aei-adv-pdf {
+        padding: 30px 4%;
+    }
+
     .aei-adv-pdf-title {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .aei-adv-pdf-line {
-        width: 70px;
-        margin-bottom: 20px;
+        width: 50px;
+        margin-bottom: 16px;
     }
 
     .aei-adv-pdf-viewer {
-        height: 400px;
+        height: 380px;
         border-radius: 8px;
     }
 }

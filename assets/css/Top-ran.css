@@ -1,0 +1,199 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f9fc;
+    color: #222;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ================= HERO ================= */
+.topper-hero {
+    height: 50vh;
+    position: relative;
+    background: url('/assets/images/students/about\ banner.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topper-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.topper-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.topper-content h1 {
+    color: #fff;
+    font-size: 40px;
+    animation: fadeUp 1s ease;
+}
+
+/* ================= INTRO ================= */
+.topper-intro {
+    padding: 80px 0;
+}
+
+.topper-intro-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.topper-intro-content,
+.topper-intro-image {
+    flex: 1;
+}
+
+.topper-intro-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #0a3d62;
+}
+
+.topper-intro-content p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.topper-intro-image img {
+    width: 100%;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.topper-intro-image img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= RESULTS ================= */
+.topper-results {
+    padding: 80px 0;
+}
+
+.topper-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* ================= CARD ================= */
+.topper-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.topper-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(0, 123, 255, 0.15), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.topper-card:hover::before {
+    opacity: 1;
+}
+
+.topper-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.topper-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.topper-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.topper-card p {
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+
+    .topper-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topper-intro-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .topper-content h1 {
+        font-size: 32px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .topper-hero {
+        height: 35vh;
+    }
+
+    .topper-content h1 {
+        font-size: 24px;
+    }
+
+    .topper-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topper-intro {
+        padding: 50px 0;
+    }
+
+    .topper-results {
+        padding: 50px 0;
+    }
+}

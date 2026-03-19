@@ -1,0 +1,236 @@
+/* ===================== GLOBAL ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ===================== FOOTER BASE ===================== */
+.main-footer {
+    background: #104C80;
+    color: #fff;
+    padding: 60px 0 30px;
+}
+
+/* FIX: better container behavior */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ===================== GRID ===================== */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+/* ===================== LOGO ===================== */
+.footer-col img {
+    width: auto;
+    max-width: 160px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* ===================== HEADINGS ===================== */
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #0680A9;
+    position: relative;
+}
+
+.footer-heading::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: #BC2F25;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* ===================== TEXT ===================== */
+.footer-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #ccc;
+}
+
+/* ===================== LINKS ===================== */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #BC2F25;
+    transform: translateX(5px);
+}
+
+/* ===================== NEWSLETTER ===================== */
+.news-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.footer-newsletter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.footer-newsletter input {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.footer-newsletter button {
+    padding: 10px 15px;
+    background: #BC2F25;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-newsletter button:hover {
+    background: #0680A9;
+}
+
+/* ===================== SOCIAL ===================== */
+.social-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #1f5f96;
+    text-align: center;
+}
+
+.social-section a {
+    margin: 0 10px;
+    color: #ccc;
+    font-size: 22px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-section a:hover {
+    color: #BC2F25;
+}
+
+/* ===================== LEGAL LINKS ===================== */
+.legal-links {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #bbb;
+    line-height: 1.8;
+}
+
+.legal-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 6px;
+    display: inline-block;
+}
+
+.legal-links a:hover {
+    color: #BC2F25;
+}
+
+/* ===================== COPYRIGHT ===================== */
+.copyright {
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid #1f5f96;
+}
+
+.copyright p {
+    font-size: 13px;
+    color: #bbb;
+}
+
+/* ===================== TABLET ===================== */
+@media (max-width: 992px) {
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 600px) {
+
+    .main-footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-col {
+        text-align: left;
+    }
+
+    .footer-heading::after {
+        left: 0;
+    }
+
+    .footer-newsletter {
+        flex-direction: column;
+    }
+
+    .footer-newsletter input,
+    .footer-newsletter button {
+        width: 100%;
+    }
+
+    .social-section a {
+        font-size: 20px;
+        margin: 0 8px;
+    }
+
+    .legal-links {
+        padding: 0 10px;
+    }
+
+    .copyright p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}

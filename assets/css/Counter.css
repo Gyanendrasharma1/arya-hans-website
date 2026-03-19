@@ -4,17 +4,17 @@
 
 #aei-counter {
     background: #BC2F25;
-    padding: 20px 8%;
+    padding: 16px 5%; /* reduced side + vertical space */
 }
 
-/* container */
+/* CONTAINER */
 
 .aei-counter-container {
-    max-width: 1200px;
+    max-width: 1100px; /* tighter layout */
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 10px; /* reduced gap */
     align-items: center;
     text-align: center;
 }
@@ -26,6 +26,8 @@
 .aei-counter-item {
     color: #fff;
     position: relative;
+    padding: 10px 8px; /* compact inner spacing */
+    transition: transform 0.25s ease;
 }
 
 /* vertical divider line */
@@ -33,12 +35,12 @@
 .aei-counter-item:not(:last-child)::after {
     content: "";
     position: absolute;
-    right: -10px;
+    right: 0; /* fixed alignment */
     top: 50%;
     transform: translateY(-50%);
     width: 1px;
-    height: 50px;
-    background: rgba(255,255,255,0.3);
+    height: 40px;
+    background: rgba(255,255,255,0.25);
 }
 
 /* =========================
@@ -46,14 +48,15 @@
 ========================= */
 
 .aei-counter-icon {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .aei-counter-icon img {
-    width: 42px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* white icon effect */
+    filter: brightness(0) invert(1);
+    transition: transform 0.25s ease;
 }
 
 /* =========================
@@ -61,10 +64,11 @@
 ========================= */
 
 .aei-counter-number {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
+    transition: transform 0.25s ease, color 0.25s ease;
 }
 
 /* =========================
@@ -72,85 +76,41 @@
 ========================= */
 
 .aei-counter-text {
-    font-size: 14px;
+    font-size: 13px;
     font-family: "Open Sans", sans-serif;
     opacity: 0.9;
+    transition: opacity 0.25s ease;
 }
 
 /* =========================
    HOVER EFFECT
 ========================= */
 
-.aei-counter-item {
-    color: #fff;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-/* lift effect */
-
 .aei-counter-item:hover {
-    transform: translateY(-6px);
-}
-
-/* =========================
-   ICON HOVER
-========================= */
-
-.aei-counter-icon img {
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
-    transition: transform 0.3s ease;
+    transform: translateY(-4px);
 }
 
 .aei-counter-item:hover .aei-counter-icon img {
-    transform: scale(1.15) rotate(5deg);
-}
-
-/* =========================
-   NUMBER ANIMATION
-========================= */
-
-.aei-counter-number {
-    font-size: 30px;
-    font-weight: 700;
-    font-family: "Montserrat", sans-serif;
-    margin-bottom: 4px;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.1);
 }
 
 .aei-counter-item:hover .aei-counter-number {
-    transform: scale(1.1);
-    color: #ffd6d3; /* light highlight */
-}
-
-/* =========================
-   TEXT HOVER
-========================= */
-
-.aei-counter-text {
-    font-size: 14px;
-    font-family: "Open Sans", sans-serif;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
+    transform: scale(1.05);
+    color: #ffd6d3;
 }
 
 .aei-counter-item:hover .aei-counter-text {
     opacity: 1;
 }
 
-/* =========================
-   DIVIDER SMOOTH EFFECT
-========================= */
+/* divider animation */
 
 .aei-counter-item:not(:last-child)::after {
-    transition: height 0.3s ease;
+    transition: height 0.25s ease;
 }
 
 .aei-counter-item:hover::after {
-    height: 70px;
+    height: 55px;
 }
 
 /* =========================
@@ -160,30 +120,68 @@
 @media (max-width: 992px) {
 
     #aei-counter {
-        padding: 30px 6%;
+        padding: 20px 6%;
     }
 
     .aei-counter-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
-        gap: 25px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
-    /* remove vertical dividers */
     .aei-counter-item::after {
         display: none;
     }
 
     .aei-counter-number {
-        font-size: 26px;
-    }
-
-    .aei-counter-text {
-        font-size: 13px;
+        font-size: 24px;
     }
 
     .aei-counter-icon img {
-        width: 38px;
-        height: 38px;
+        width: 32px;
+        height: 32px;
+    }
+}
+/* =========================
+   TABLET (≤ 992px)
+========================= */
+
+@media (max-width: 992px) {
+
+    #aei-counter {
+        padding: 18px 5%;
+    }
+
+    .aei-counter-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+        gap: 14px;
+    }
+
+    .aei-counter-item {
+        padding: 10px 6px; /* tighter */
+    }
+
+    /* remove divider */
+    .aei-counter-item::after {
+        display: none;
+    }
+
+    .aei-counter-icon {
+        margin-bottom: 6px;
+    }
+
+    .aei-counter-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .aei-counter-number {
+        font-size: 22px;
+        margin-bottom: 2px;
+    }
+
+    .aei-counter-text {
+        font-size: 12px;
+        line-height: 1.3;
     }
 }
 
@@ -195,33 +193,33 @@
 @media (max-width: 576px) {
 
     #aei-counter {
-        padding: 25px 5%;
+        padding: 16px 4%;
     }
 
     .aei-counter-container {
-        grid-template-columns: 1fr; /* single column */
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr); /* FORCE 2x2 */
+        gap: 10px;
     }
 
     .aei-counter-item {
-        padding: 15px 0;
+        padding: 8px 6px; /* compact height */
     }
 
-    /* optional: add horizontal divider instead */
-    .aei-counter-item:not(:last-child) {
-        border-bottom: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .aei-counter-number {
-        font-size: 24px;
-    }
-
-    .aei-counter-text {
-        font-size: 13px;
+    .aei-counter-icon {
+        margin-bottom: 5px;
     }
 
     .aei-counter-icon img {
-        width: 34px;
-        height: 34px;
+        width: 26px;
+        height: 26px;
+    }
+
+    .aei-counter-number {
+        font-size: 20px;
+    }
+
+    .aei-counter-text {
+        font-size: 11px;
+        line-height: 1.2;
     }
 }
