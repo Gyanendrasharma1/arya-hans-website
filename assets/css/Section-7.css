@@ -1,0 +1,186 @@
+/* =========================
+   SECTION
+========================= */
+
+#aei-reviews {
+    padding: 50px 0;
+    background: #f7f9fc;
+    overflow: hidden;
+}
+
+/* header */
+
+.aei-reviews-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.aei-reviews-header h2 {
+    font-size: 34px;
+    color: #BC2F25;
+;
+}
+
+/* =========================
+   SLIDER
+========================= */
+
+.aei-reviews-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+/* moving track */
+
+.aei-reviews-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: aei-scroll 25s linear infinite;
+}
+
+/* infinite animation */
+
+@keyframes aei-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* =========================
+   CARD
+========================= */
+
+.aei-review-card {
+    min-width: 260px;
+    max-width: 260px;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* top */
+
+.aei-review-top img {
+    width: 30px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* text */
+
+.aei-review-card p {
+    font-size: 13px;
+    color: #5f6c7b;
+    margin-bottom: 15px;
+}
+
+/* bottom */
+
+.aei-review-bottom h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #1f2d3d;
+}
+
+/* stars */
+
+.aei-stars {
+    color: #fbbc04; /* google yellow */
+    font-size: 14px;
+}
+
+/* =========================
+   TABLET (≤ 992px)
+========================= */
+
+@media (max-width: 992px) {
+
+    #aei-reviews {
+        padding: 45px 0;
+    }
+
+    .aei-reviews-header h2 {
+        font-size: 28px;
+    }
+
+    .aei-reviews-track {
+        gap: 18px;
+        animation: aei-scroll 30s linear infinite; /* slower for tablet */
+    }
+
+    .aei-review-card {
+        min-width: 230px;
+        max-width: 230px;
+        padding: 16px;
+    }
+
+    .aei-review-card p {
+        font-size: 12.5px;
+    }
+
+    .aei-review-bottom h4 {
+        font-size: 13.5px;
+    }
+
+    .aei-stars {
+        font-size: 13px;
+    }
+
+    .aei-review-top img {
+        width: 26px;
+    }
+}
+
+
+/* =========================
+   MOBILE (≤ 576px)
+========================= */
+
+@media (max-width: 576px) {
+
+    #aei-reviews {
+        padding: 40px 0;
+    }
+
+    .aei-reviews-header {
+        margin-bottom: 20px;
+    }
+
+    .aei-reviews-header h2 {
+        font-size: 22px;
+    }
+
+    .aei-reviews-track {
+        gap: 15px;
+        animation: aei-scroll 35s linear infinite; /* slower for readability */
+    }
+
+    .aei-review-card {
+        min-width: 200px;
+        max-width: 200px;
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .aei-review-card p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .aei-review-bottom h4 {
+        font-size: 13px;
+    }
+
+    .aei-stars {
+        font-size: 12px;
+    }
+
+    .aei-review-top img {
+        width: 24px;
+    }
+}

@@ -1,0 +1,194 @@
+/* =========================
+   JEE MAIN SYLLABUS
+========================= */
+
+#aei-jee-syllabus {
+    padding: 80px 8%;
+    background: #f7f9fc;
+}
+
+.aei-jee-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* LEFT CONTENT */
+
+.aei-jee-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.aei-jee-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+.aei-jee-desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* RIGHT IMAGE */
+
+.aei-jee-image {
+    width: 100%;
+}
+
+.aei-jee-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+    .aei-jee-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .aei-jee-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    #aei-jee-syllabus {
+        padding: 60px 5%;
+    }
+
+    .aei-jee-title {
+        font-size: 26px;
+    }
+
+    .aei-jee-desc {
+        font-size: 15px;
+    }
+}
+
+/* =========================
+   JEE MAIN SYLLABUS
+========================= */
+
+#aei-jee-syllabus {
+    padding: 80px 8%;
+    background: #f7f9fc;
+}
+
+.aei-jee-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* LEFT CONTENT */
+
+.aei-jee-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.aei-jee-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+.aei-jee-desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* RIGHT IMAGE */
+
+.aei-jee-image {
+    width: 100%;
+}
+
+.aei-jee-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   TABLET (≤ 992px)
+========================= */
+
+@media (max-width: 992px) {
+
+    .aei-jee-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Bring image on top for better UX */
+    .aei-jee-image {
+        order: -1;
+    }
+
+    .aei-jee-title {
+        font-size: 32px;
+    }
+
+    .aei-jee-desc {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   MOBILE (≤ 576px)
+========================= */
+
+@media (max-width: 576px) {
+
+    #aei-jee-syllabus {
+        padding: 60px 5%;
+    }
+
+    .aei-jee-container {
+        gap: 25px;
+    }
+
+    .aei-jee-title {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .aei-jee-desc {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Slight polish for image */
+    .aei-jee-image img {
+        border-radius: 10px;
+    }
+}

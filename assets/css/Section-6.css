@@ -1,0 +1,183 @@
+/* =========================
+   SECTION
+========================= */
+
+#aei-welcome {
+    padding: 30px 8%;
+    background: #ffffff;
+}
+
+/* container */
+
+.aei-welcome-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.aei-welcome-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #BC2F25; /* Maroon heading */
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+.aei-welcome-subtitle {
+    font-size: 18px;
+    color: #104C80;
+    font-weight: 500;
+    margin-bottom: 18px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.aei-welcome-desc {
+    font-size: 15px;
+    color: #104C80;
+    opacity: 0.75;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* =========================
+   CTA BUTTONS
+========================= */
+
+.aei-welcome-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.aei-welcome-btn {
+    background: #104C80;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.aei-welcome-btn:hover {
+    background: #0680A9;
+}
+
+.aei-welcome-btn-outline {
+    border: 2px solid #BC2F25;
+    color: #BC2F25;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.aei-welcome-btn-outline:hover {
+    background: #BC2F25;
+    color: #fff;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.aei-welcome-image img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(16, 76, 128, 0.15);
+}
+
+/* =========================
+   TABLET (≤ 992px)
+========================= */
+
+@media (max-width: 992px) {
+
+    #aei-welcome {
+        padding: 60px 6%;
+    }
+
+    .aei-welcome-container {
+        grid-template-columns: 1fr; /* stack layout */
+        gap: 40px;
+    }
+
+    .aei-welcome-title {
+        font-size: 34px;
+    }
+
+    .aei-welcome-subtitle {
+        font-size: 17px;
+    }
+
+    .aei-welcome-desc {
+        font-size: 14px;
+    }
+
+    .aei-welcome-image {
+        order: -1; /* image on top (optional UX improvement) */
+    }
+}
+
+
+/* =========================
+   MOBILE (≤ 576px)
+========================= */
+
+@media (max-width: 576px) {
+
+    #aei-welcome {
+        padding: 50px 5%;
+    }
+
+    .aei-welcome-title {
+        font-size: 26px;
+        line-height: 1.4;
+    }
+
+    .aei-welcome-subtitle {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .aei-welcome-desc {
+        font-size: 13.5px;
+        line-height: 1.6;
+    }
+
+    .aei-welcome-container {
+        gap: 30px;
+    }
+
+    /* CTA stack */
+    .aei-welcome-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .aei-welcome-btn,
+    .aei-welcome-btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* image refinement */
+    .aei-welcome-image img {
+        border-radius: 10px;
+    }
+}
+

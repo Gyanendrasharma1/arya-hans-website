@@ -1,0 +1,244 @@
+/* =========================
+   BREADCRUMB
+========================= */
+
+.aei-breadcrumb {
+    max-width: 1200px;
+    margin: 20px auto 30px;
+    padding: 12px 18px;
+    background: rgba(6, 128, 169, 0.08);
+    border-radius: 8px;
+}
+
+.aei-breadcrumb-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+.aei-breadcrumb-item a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    color: #0680A9;
+    transition: 0.3s ease;
+}
+
+.aei-breadcrumb-item a:hover {
+    color: #104C80;
+}
+
+.aei-breadcrumb-separator {
+    color: #104C80;
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.aei-breadcrumb-item.active {
+    font-size: 14px;
+    font-weight: 600;
+    color: #BC2F25;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* =========================
+   NEET SYLLABUS SECTION
+========================= */
+
+#aei-neet-syllabus {
+    padding: 80px 8%;
+    background: #ffffff;
+}
+
+.aei-neet-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+
+/* LEFT CONTENT */
+
+.aei-neet-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #BC2F25;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.aei-neet-desc {
+    font-size: 15px;
+    color: #104C80;
+    line-height: 1.7;
+    opacity: 0.8;
+    margin-bottom: 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* RIGHT IMAGE */
+
+.aei-neet-image img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(16, 76, 128, 0.15);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+    .aei-neet-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .aei-neet-title {
+        font-size: 34px;
+    }
+
+    .aei-neet-image {
+        order: -1;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .aei-breadcrumb {
+        margin: 15px auto 20px;
+        padding: 10px 14px;
+    }
+
+    .aei-neet-title {
+        font-size: 28px;
+    }
+
+    .aei-neet-desc {
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   PDF SECTION
+========================= */
+
+#aei-syllabus-pdf {
+    padding: 80px 8%;
+    background: #f7f9fc;
+}
+
+.aei-pdf-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.aei-pdf-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #BC2F25;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 10px;
+}
+
+/* underline accent */
+
+.aei-pdf-line {
+    width: 90px;
+    height: 3px;
+    background: #0680A9;
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+
+
+/* =========================
+   PDF VIEWER
+========================= */
+
+.aei-pdf-viewer {
+    width: 100%;
+    height: 650px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid rgba(16, 76, 128, 0.08);
+    box-shadow: 0 15px 40px rgba(16, 76, 128, 0.12);
+    position: relative;
+}
+
+/* subtle top bar effect */
+
+.aei-pdf-viewer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #BC2F25, #0680A9);
+    z-index: 2;
+}
+
+/* iframe */
+
+.aei-pdf-viewer iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+    #aei-syllabus-pdf {
+        padding: 60px 6%;
+    }
+
+    .aei-pdf-title {
+        font-size: 30px;
+    }
+
+    .aei-pdf-viewer {
+        height: 520px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .aei-pdf-title {
+        font-size: 24px;
+    }
+
+    .aei-pdf-line {
+        width: 70px;
+        margin-bottom: 20px;
+    }
+
+    .aei-pdf-viewer {
+        height: 400px;
+        border-radius: 8px;
+    }
+}

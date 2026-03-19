@@ -1,0 +1,227 @@
+/* =========================
+   COUNTER SECTION
+========================= */
+
+#aei-counter {
+    background: #BC2F25;
+    padding: 20px 8%;
+}
+
+/* container */
+
+.aei-counter-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+/* =========================
+   COUNTER ITEM
+========================= */
+
+.aei-counter-item {
+    color: #fff;
+    position: relative;
+}
+
+/* vertical divider line */
+
+.aei-counter-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50px;
+    background: rgba(255,255,255,0.3);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.aei-counter-icon {
+    margin-bottom: 12px;
+}
+
+.aei-counter-icon img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* white icon effect */
+}
+
+/* =========================
+   NUMBER
+========================= */
+
+.aei-counter-number {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 4px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.aei-counter-text {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    opacity: 0.9;
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.aei-counter-item {
+    color: #fff;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* lift effect */
+
+.aei-counter-item:hover {
+    transform: translateY(-6px);
+}
+
+/* =========================
+   ICON HOVER
+========================= */
+
+.aei-counter-icon img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.aei-counter-item:hover .aei-counter-icon img {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* =========================
+   NUMBER ANIMATION
+========================= */
+
+.aei-counter-number {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 4px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.aei-counter-item:hover .aei-counter-number {
+    transform: scale(1.1);
+    color: #ffd6d3; /* light highlight */
+}
+
+/* =========================
+   TEXT HOVER
+========================= */
+
+.aei-counter-text {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.aei-counter-item:hover .aei-counter-text {
+    opacity: 1;
+}
+
+/* =========================
+   DIVIDER SMOOTH EFFECT
+========================= */
+
+.aei-counter-item:not(:last-child)::after {
+    transition: height 0.3s ease;
+}
+
+.aei-counter-item:hover::after {
+    height: 70px;
+}
+
+/* =========================
+   TABLET (≤ 992px)
+========================= */
+
+@media (max-width: 992px) {
+
+    #aei-counter {
+        padding: 30px 6%;
+    }
+
+    .aei-counter-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 25px;
+    }
+
+    /* remove vertical dividers */
+    .aei-counter-item::after {
+        display: none;
+    }
+
+    .aei-counter-number {
+        font-size: 26px;
+    }
+
+    .aei-counter-text {
+        font-size: 13px;
+    }
+
+    .aei-counter-icon img {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+
+/* =========================
+   MOBILE (≤ 576px)
+========================= */
+
+@media (max-width: 576px) {
+
+    #aei-counter {
+        padding: 25px 5%;
+    }
+
+    .aei-counter-container {
+        grid-template-columns: 1fr; /* single column */
+        gap: 20px;
+    }
+
+    .aei-counter-item {
+        padding: 15px 0;
+    }
+
+    /* optional: add horizontal divider instead */
+    .aei-counter-item:not(:last-child) {
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .aei-counter-number {
+        font-size: 24px;
+    }
+
+    .aei-counter-text {
+        font-size: 13px;
+    }
+
+    .aei-counter-icon img {
+        width: 34px;
+        height: 34px;
+    }
+}

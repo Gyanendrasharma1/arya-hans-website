@@ -1,0 +1,280 @@
+/* =========================
+   HIGHLIGHTS SECTION
+========================= */
+
+#aei-highlights {
+    padding: 20px 8%;
+    background: #fff;
+}
+
+.aei-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.aei-section-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.aei-section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    color: #BC2F25;
+    margin-bottom: 8px;
+}
+
+.aei-section-subtitle {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #555;
+    max-width: 550px;
+    margin: auto;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.aei-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* =========================
+   CARD DESIGN
+========================= */
+
+.aei-highlight-card {
+    background: linear-gradient(135deg, #0680A9, #104C80);
+    border-radius: 16px;
+    padding: 22px 18px;
+    text-align: center;
+    color: #fff;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle glass overlay */
+.aei-highlight-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.05);
+    transform: rotate(25deg);
+    transition: 0.5s;
+}
+
+.aei-highlight-card:hover::before {
+    top: -20%;
+    left: -20%;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.aei-highlight-card img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.aei-highlight-card h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.aei-highlight-card p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13.5px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+.aei-highlight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(16, 76, 128, 0.25);
+}
+
+/* icon animation */
+.aei-highlight-card:hover img {
+    transform: scale(1.08) rotate(2deg);
+}
+
+/* =========================
+   ENTRY ANIMATION
+========================= */
+
+.aei-highlight-card {
+    animation: fadeUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.aei-highlight-card:nth-child(1) { animation-delay: 0.1s; }
+.aei-highlight-card:nth-child(2) { animation-delay: 0.2s; }
+.aei-highlight-card:nth-child(3) { animation-delay: 0.3s; }
+.aei-highlight-card:nth-child(4) { animation-delay: 0.4s; }
+.aei-highlight-card:nth-child(5) { animation-delay: 0.5s; }
+.aei-highlight-card:nth-child(6) { animation-delay: 0.6s; }
+.aei-highlight-card:nth-child(7) { animation-delay: 0.7s; }
+.aei-highlight-card:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(35px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* =========================
+   TABLET (<=1024px)
+========================= */
+
+@media (max-width: 1024px) {
+
+    #aei-highlights {
+        padding: 30px 6%;
+    }
+
+    .aei-highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .aei-section-title {
+        font-size: 30px;
+    }
+
+    .aei-section-subtitle {
+        font-size: 13.5px;
+    }
+
+    .aei-highlight-card {
+        padding: 20px 16px;
+    }
+
+    .aei-highlight-card img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .aei-highlight-card h3 {
+        font-size: 16px;
+    }
+
+    .aei-highlight-card p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================
+   MOBILE (<=768px)
+========================= */
+
+@media (max-width: 768px) {
+
+    #aei-highlights {
+        padding: 25px 5%;
+    }
+
+    .aei-section-header {
+        margin-bottom: 25px;
+    }
+
+    .aei-section-title {
+        font-size: 26px;
+    }
+
+    .aei-section-subtitle {
+        font-size: 13px;
+        max-width: 100%;
+    }
+
+    .aei-highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .aei-highlight-card {
+        padding: 18px 14px;
+        border-radius: 14px;
+    }
+
+    .aei-highlight-card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 12px;
+    }
+
+    .aei-highlight-card h3 {
+        font-size: 15px;
+    }
+
+    .aei-highlight-card p {
+        font-size: 12.8px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE (<=480px)
+========================= */
+
+@media (max-width: 480px) {
+
+    #aei-highlights {
+        padding: 20px 4%;
+    }
+
+    .aei-section-title {
+        font-size: 22px;
+    }
+
+    .aei-section-subtitle {
+        font-size: 12.5px;
+    }
+
+    .aei-highlight-card {
+        padding: 16px 12px;
+    }
+
+    .aei-highlight-card img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .aei-highlight-card h3 {
+        font-size: 14.5px;
+    }
+
+    .aei-highlight-card p {
+        font-size: 12.5px;
+        line-height: 1.35;
+    }
+}
