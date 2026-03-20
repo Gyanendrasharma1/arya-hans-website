@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryahans Educational Institute</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/css/courses.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/Counter.css">
+    <link rel="stylesheet" href="./assets/css/Section-2.css">
+    <link rel="stylesheet" href="./assets/css/Section-4.css">
+    <link rel="stylesheet" href="./assets/css/Section-5.css">
+    <link rel="stylesheet" href="./assets/css/Section-6.css">
+    <link rel="stylesheet" href="./assets/css/Top-ran.css">
+    <link rel="stylesheet" href="./assets/css/about.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/Section-7.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+</head>
+
+<body>
+
+    <header id="aei-header">
+
+        <!-- TOP BAR -->
+
+        <div class="aei-topbar">
+
+            <div class="aei-container aei-topbar-wrapper">
+
+                <div class="aei-contact">
+                    📞 +91 9696 019 206
+                </div>
+
+                <div class="aei-actions">
+                    <a href="contact.html" class="aei-enquiry">Enquiry</a>
+                    <a href="login.html" class="aei-login">Login</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MAIN HEADER -->
+
+        <div class="aei-main-header">
+
+            <div class="aei-container aei-header-wrapper">
+
+                <div class="aei-logo">
+                    <img src="./assets/images/logo/logo.png" alt="Aryahans Logo">
+                </div>
+
+
+                <!-- MOBILE TOGGLE -->
+
+                <div class="aei-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="aei-navbar">
+
+                    <ul class="aei-nav-menu">
+
+                        <li><a href="index.html">Home</a></li>
+
+                        <li><a href="about.html">About Us</a></li>
+
+                        <li class="aei-dropdown">
+                            <a href="courses.html">Courses</a>
+
+                            <ul class="aei-dropdown-menu">
+                                <li><a href="courses.html#course-jee">IIT-JEE (Advanced + Main)</a></li>
+                                <li><a href="courses.html#course-neet">NEET-UG</a></li>
+                                <li><a href="courses.html#course-uptu">UPTU / GBTU</a></li>
+                                <li><a href="courses.html#course-foundation">Foundation</a></li>
+                                <li><a href="courses.html#course-bts">Bts-360</a></li>
+                            </ul>
+
+                        </li>
+
+
+                        <li class="aei-dropdown">
+
+                            <a href="syllabus.html">Syllabus</a>
+
+                            <ul class="aei-dropdown-menu">
+                                <li><a href="jee-mains.html">JEE Main</a></li>
+                                <li><a href="jee-advanced-syllabus.html">JEE Advanced</a></li>
+                                <li><a href="neet-syllabus.html">NEET</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li><a href="top-rankers.html">Top Rankers</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+<main>
+    <section class="auth-section">
+        <div class="auth-container">
+
+            <!-- LEFT PANEL -->
+            <div class="auth-left">
+                <div class="auth-brand">
+                    <h1>AEI Institute</h1>
+                    <p>Empowering Students for IIT-JEE & NEET Success</p>
+                </div>
+            </div>
+
+            <!-- RIGHT PANEL -->
+            <div class="auth-right">
+                <div class="auth-card">
+
+                    <!-- TOGGLE -->
+                    <div class="auth-toggle">
+                        <button id="loginTab" class="active" type="button">Login</button>
+                        <button id="registerTab" type="button">Register</button>
+                    </div>
+
+                    <!-- LOGIN FORM -->
+                    <form id="loginForm" class="auth-form active">
+                        <h2>Welcome Back</h2>
+
+                        <div class="auth-field">
+                            <input type="email" id="loginEmail" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="auth-field">
+                            <input type="password" id="loginPassword" placeholder="Password" required>
+                            <span class="toggle-password" onclick="togglePassword('loginPassword', this)">Show</span>
+                        </div>
+
+                        <button type="submit" class="auth-btn">Login</button>
+
+                        <p class="auth-switch">
+                            New user? <span id="goRegister">Create Account</span>
+                        </p>
+                    </form>
+
+                    <!-- REGISTER FORM -->
+                    <form id="registerForm" class="auth-form">
+                        <h2>Create Account</h2>
+
+                        <div class="auth-field">
+                            <input type="text" id="registerName" placeholder="Full Name" required>
+                        </div>
+
+                        <div class="auth-field">
+                            <input type="email" id="registerEmail" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="auth-field">
+                            <input type="tel" id="registerMobile" placeholder="Mobile Number" required>
+                        </div>
+
+                        <div class="auth-field">
+                            <input type="password" id="registerPassword" placeholder="Password" required>
+                            <span class="toggle-password" onclick="togglePassword('registerPassword', this)">Show</span>
+                        </div>
+
+                        <button type="submit" class="auth-btn">Register</button>
+
+                        <p class="auth-switch">
+                            Already have an account? <span id="goLogin">Login</span>
+                        </p>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+
+    <!-- FOOTER START -->
+<footer class="main-footer">
+
+    <div class="container footer-grid">
+
+        <!-- About / Contacts -->
+        <div class="footer-col">
+            <img src="./assets/images/logo/logo.png" alt="Aryahans Logo">
+
+            <p class="footer-description">
+                Aryahans Educational Institute provides quality coaching for IIT-JEE,
+                UPSEE, NTSE and Olympiads with expert faculty and structured learning.
+            </p>
+
+            <div class="footer-contact">
+                <p>📍 117/N/95, Kakadev, Kanpur</p>
+                <p>📞 +91-9839161764</p>
+                <p>📧 info@aryahans.com</p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./topper.html">Top Rankers</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Courses -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Courses</h4>
+            <ul class="footer-links">
+                <li><a href="#">IIT-JEE</a></li>
+                <li><a href="#">UPSEE</a></li>
+                <li><a href="#">NTSE</a></li>
+                <li><a href="#">National Olympiad</a></li>
+                <li><a href="#">Daily Practice Paper</a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Newsletter</h4>
+            <p class="news-text">
+                Subscribe to our newsletter for daily updates.
+            </p>
+
+            <form class="footer-newsletter">
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Social -->
+    <div class="social-section">
+        <a href="#"><i class="ri-facebook-circle-line"></i></a>
+        <a href="#"><i class="ri-twitter-x-line"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-youtube-line"></i></a>
+    </div>
+
+    <!-- Legal Links -->
+    <div class="legal-links">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Payment Terms</a>
+        <a href="#">Refund & Cancellation</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">Public Notice</a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>© 2026 Aryahans Education Institute Pvt. Ltd. All Rights Reserved.</p>
+    </div>
+
+</footer>
+    <!-- FOOTER END -->
+
+
+    <!-- MAIN JS -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/Hero.js"></script>
+    <script src="./assets/js/counter.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/dropdown.js"></script>
+</body>
+
+</html>
