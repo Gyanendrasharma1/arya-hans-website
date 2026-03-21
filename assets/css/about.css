@@ -19,7 +19,7 @@
 .about-hero {
     position: relative;
     height: 420px;
-    background: url('file:///C:/Users/DELL/Desktop/arya-hans-website/assets/images/About/about-banner.Webp') center/cover no-repeat;
+    background: url('../images/About/about-banner.webp') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
