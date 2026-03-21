@@ -28,16 +28,15 @@
 
 <body>
 
-    <header id="aei-header">
+     <header id="aei-header">
 
         <!-- TOP BAR -->
-
         <div class="aei-topbar">
-
             <div class="aei-container aei-topbar-wrapper">
 
                 <div class="aei-contact">
-                    📞 +91 9696 019 206
+                    <span aria-hidden="true">📞</span>
+                    <a href="tel:+919696019206">+91 9696 019 206</a>
                 </div>
 
                 <div class="aei-actions">
@@ -46,30 +45,28 @@
                 </div>
 
             </div>
-
         </div>
 
-
         <!-- MAIN HEADER -->
-
         <div class="aei-main-header">
-
             <div class="aei-container aei-header-wrapper">
 
+                <!-- LOGO -->
                 <div class="aei-logo">
-                    <img src="assets/images/logo/logo.png" alt="Aryahans Logo">
+                    <a href="index.html" aria-label="Aryahans Home">
+                        <img src="./assets/images/logo/logo.png" alt="Aryahans Institute Logo">
+                    </a>
                 </div>
-
 
                 <!-- MOBILE TOGGLE -->
-
-                <div class="aei-menu-toggle">
+                <div class="aei-menu-toggle" aria-label="Toggle menu" role="button" tabindex="0">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
 
-                <nav class="aei-navbar">
+                <!-- NAVIGATION -->
+                <nav class="aei-navbar" aria-label="Main Navigation">
 
                     <ul class="aei-nav-menu">
 
@@ -78,29 +75,25 @@
                         <li><a href="about.html">About Us</a></li>
 
                         <li class="aei-dropdown">
-                            <a href="#">Courses</a>
+                            <a href="#" aria-haspopup="true" aria-expanded="false">Courses</a>
 
                             <ul class="aei-dropdown-menu">
-                                <li><a href="courses.html#jee">IIT-JEE (Advanced + Main)</a></li>
-                                <li><a href="courses.html#neet">NEET-UG</a></li>
-                                <li><a href="courses.html#uptu">UPTU / GBTU</a></li>
-                                <li><a href="courses.html#foundation">Foundation</a></li>
-                                <li><a href="courses.html#Bts-360">Bts-360</a></li>
+                                <li><a href="IIT-JEE-Cources.html">IIT-JEE (Advanced + Main)</a></li>
+                                <li><a href="NEET.html">NEET-UG</a></li>
+                                <li><a href="UPTU.html">UPTU / GBTU</a></li>
+                                <li><a href="Foundation.html">Foundation</a></li>
+                                <li><a href="BTS-360.html">Bts-360</a></li>
                             </ul>
-
                         </li>
 
-
                         <li class="aei-dropdown">
-
-                            <a href="#">Syllabus</a>
+                            <a href="syllabus.html" aria-haspopup="true" aria-expanded="false">Syllabus</a>
 
                             <ul class="aei-dropdown-menu">
                                 <li><a href="jee-mains.html">JEE Main</a></li>
                                 <li><a href="jee-advanced-syllabus.html">JEE Advanced</a></li>
                                 <li><a href="neet-syllabus.html">NEET</a></li>
                             </ul>
-
                         </li>
 
                         <li><a href="top-rankers.html">Top Rankers</a></li>
@@ -112,7 +105,6 @@
                 </nav>
 
             </div>
-
         </div>
 
     </header>
@@ -302,6 +294,20 @@
     <script src="./assets/js/counter.js"></script>
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/dropdown.js"></script>
+     <script>
+const header = document.querySelector(".aei-main-header");
+const topbar = document.querySelector(".aei-topbar");
+
+const triggerPoint = topbar.offsetHeight;
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > triggerPoint) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+});
+</script>
 </body>
 
 </html>

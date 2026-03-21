@@ -1,444 +1,215 @@
-/* ===================== RESET / BASE ===================== */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+#about-page {
+    font-family: 'Poppins', sans-serif;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* ===================== GLOBAL CONTAINER ===================== */
+/* CONTAINER */
 .container {
-    width: 90%;
     max-width: 1200px;
     margin: auto;
 }
 
-/* ===================== LINKS ===================== */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ===================== IMAGES ===================== */
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* ===================== BUTTON RESET ===================== */
-button {
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-}
-
-/* ===================== ABOUT HERO ===================== */
+/* ================= HERO ================= */
 .about-hero {
     position: relative;
-    height: 300px;
-    background: url('/assets/images/About/about\ banner.png') no-repeat center center/cover;
+    height: 420px;
+    background: url('file:///C:/Users/DELL/Desktop/arya-hans-website/assets/images/About/about-banner.Webp') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Overlay */
-.about-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(16, 76, 128, 0.7);
-}
-
-/* Content */
-.about-content {
-    position: relative;
-    z-index: 2;
     text-align: center;
 }
 
-.about-content h2 {
+.about-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(16, 76, 128, 0.75);
+}
+
+.about-hero-content {
+    position: relative;
     color: #fff;
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 1px;
 }
 
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
+.about-hero h1 {
+    font-size: 42px;
+    font-weight: 600;
 }
 
-@media (max-width: 600px) {
-    .about-hero {
-        height: 220px;
-    }
-
-    .about-content h2 {
-        font-size: 22px;
-    }
+.about-hero p {
+    margin-top: 12px;
+    font-size: 16px;
+    opacity: 0.9;
 }
 
-/* ===================== INTRO SECTION ===================== */
-.intro-section {
-    padding: 60px 0;
-    background: #f9f9f9;
+/* ================= COMMON ================= */
+section {
+    padding: 80px 8%;
 }
 
-.intro-wrapper {
-    display: flex;
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
-    gap: 40px;
 }
 
-/* Image */
-.intro-image {
-    flex: 1;
-}
-
-.intro-image img {
-    width: 100%;
-    border-radius: 8px;
-
-}
-
-/* Content */
-.intro-content {
-    flex: 1;
-}
-
-.intro-heading {
-    font-size: 24px;
+/* TEXT */
+.about-text h2,
+.director-content h2,
+.vision-content h2 {
+    font-size: 30px;
     color: #104C80;
     margin-bottom: 15px;
 }
 
-.intro-text {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #444;
-}
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 768px) {
-    .intro-wrapper {
-        flex-direction: column;
-    }
-}
-
-/* ===================== MAIN CONTENT SECTION ===================== */
-.main-content-section {
-    padding: 80px 0;
-    background: #f9fbfd;
-    overflow: hidden;
-}
-
-/* WRAPPER */
-.main-content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
-
-/* ===================== LEFT TEXT ===================== */
-.main-text {
-    flex: 1;
-    opacity: 0;
-    transform: translateX(-60px);
-    animation: slideLeft 1s ease forwards;
-}
-
-.section-title {
-    font-size: 30px;
-    color: #104C80;
-    margin-bottom: 20px;
-    font-weight: 700;
-    position: relative;
-}
-
-/* underline accent */
-.section-title::after {
-    content: "";
-    width: 70px;
-    height: 3px;
-    background: #BC2F25;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-}
-
-/* paragraph styling */
-.main-text p {
-    font-size: 16px;
+.about-text p,
+.director-content p,
+.vision-content p {
+    color: #666;
     line-height: 1.8;
-    color: #444;
-    margin-bottom: 18px;
-    text-align: justify;
-    transition: all 0.3s ease;
+    margin-bottom: 12px;
 }
 
-/* subtle hover effect */
-.main-text p:hover {
-    color: #000;
-}
-
-/* ===================== RIGHT IMAGE ===================== */
-.main-image {
-    width: 200px;
-    flex: 1;
-    opacity: 0;
-    transform: translateX(60px);
-    animation: slideRight 1s ease forwards;
-    /* box-shadow: 1px salmon #104C80; */
-}
-
-.main-image img {
+/* IMAGES */
+.about-image img,
+.director-image img {
     width: 100%;
-    height: 50%;
-    max-width: 54%;
-    /* margin-let: 19rem; */
-    border-radius: 12px;
+    height: 400px;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     object-fit: cover;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* hover zoom effect */
-.main-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+/* ================= DIRECTOR ================= */
+.about-director {
+    background: #fff;
 }
 
-/* ===================== ANIMATIONS ===================== */
-@keyframes slideLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.director-content h4 {
+    margin-top: 20px;
+    color: #BC2F25;
+    font-weight: 500;
 }
 
-@keyframes slideRight {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+/* ================= VISION ================= */
+.about-vision {
+    background: linear-gradient(135deg, #104C80, #0680A9);
+    text-align: center;
 }
 
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 992px) {
-    .main-content-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .section-title::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .main-text {
-        animation: fadeUp 1s ease forwards;
-    }
-
-    .main-image {
-        animation: fadeUp 1.2s ease forwards;
-    }
-
-    .main-text p {
-        text-align: left;
-    }
-}
-
-/* mobile animation */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ===== SECTION BASE ===== */
-.teaching-section {
-    padding: 80px 20px;
-    background: #f5f9ff;
-    overflow: hidden;
-}
-
-.container {
-    max-width: 1200px;
+.vision-wrapper {
+    max-width: 850px;
     margin: auto;
 }
 
-/* ===== HEADER ===== */
-.teaching-header {
-    text-align: center;
-    margin-bottom: 50px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s ease forwards;
+.vision-content h2 {
+    color: #fff;
 }
 
-.teaching-header h2 {
-    font-size: 34px;
-    color: #104C80;
-    margin-bottom: 10px;
+.vision-content p {
+    color: #e4eaf1;
 }
 
-.teaching-header p {
-    font-size: 16px;
-    color: #555;
+/* ================= INTRO ================= */
+.about-intro {
+    background: #fff;
 }
 
-/* ===== CARDS WRAPPER (SLIDER) ===== */
-.teaching-cards {
-    display: flex;
-    align-items: stretch;
-    gap: 24px;
-
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-
-    padding: 20px 10px 30px;
-
-    /* smooth mobile scrolling */
-    -webkit-overflow-scrolling: touch;
+/* ================= ACADEMIC ================= */
+.about-academic {
+    background: #f5f7fb;
 }
 
-/* Hide scrollbar */
-.teaching-cards::-webkit-scrollbar {
-    display: none;
+/* ================= HOVER EFFECT ================= */
+.about-image img:hover,
+.director-image img:hover {
+    transform: scale(1.03);
+    transition: 0.4s ease;
 }
 
-/* ===== CARD DESIGN ===== */
-.teaching-card {
-    flex: 0 0 280px; /* fixed clean size */
 
-    background: #ffffff;
-    padding: 25px 20px;
-    border-radius: 12px;
-    border-top: 4px solid #BC2F25;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-
-    transition: all 0.35s ease;
-
-    /* slider snap */
-    scroll-snap-align: start;
-
-    /* animation */
-    opacity: 0;
-    transform: translateY(40px);
-    animation: cardFade 0.8s ease forwards;
-}
-
-/* Stagger animation */
-.teaching-card:nth-child(1) { animation-delay: 0.2s; }
-.teaching-card:nth-child(2) { animation-delay: 0.4s; }
-.teaching-card:nth-child(3) { animation-delay: 0.6s; }
-.teaching-card:nth-child(4) { animation-delay: 0.8s; }
-.teaching-card:nth-child(5) { animation-delay: 1s; }
-
-/* Text */
-.teaching-card h3 {
-    font-size: 18px;
-    color: #104C80;
-    margin-bottom: 10px;
-}
-
-.teaching-card p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.5;
-}
-
-/* ===== HOVER EFFECT ===== */
-.teaching-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes cardFade {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ===== RESPONSIVENESS ===== */
-
-/* Large Tablet */
+/* ================= TABLET ================= */
 @media (max-width: 992px) {
-    .teaching-header h2 {
-        font-size: 28px;
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .teaching-card {
-        flex: 0 0 240px;
+    /* Force correct order: text first, image second */
+    .about-text,
+    .director-content {
+        order: 1;
+    }
+
+    .about-image,
+    .director-image {
+        order: 2;
+    }
+
+    /* Image height flexible */
+    .about-image img,
+    .director-image img {
+        height: 200px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .about-hero {
+        height: 320px;
+    }
+
+    .about-hero h1 {
+        font-size: 32px;
     }
 }
 
-/* Tablet */
-@media (max-width: 768px) {
-    .teaching-section {
-        padding: 60px 15px;
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+
+    section {
+        padding: 50px 5%;
     }
 
-    .teaching-header h2 {
+    .about-hero {
+        height: 260px;
+    }
+
+    .about-hero h1 {
         font-size: 24px;
+        line-height: 1.3;
     }
 
-    .teaching-header p {
+    .about-hero p {
         font-size: 14px;
     }
 
-    .teaching-cards {
-        gap: 16px;
-        padding: 15px 5px 25px;
+    .about-text h2,
+    .director-content h2,
+    .vision-content h2 {
+        font-size: 22px;
     }
 
-    .teaching-card {
-        flex: 0 0 75%;
-        padding: 20px 15px;
+    .about-text p,
+    .director-content p,
+    .vision-content p {
+        font-size: 14px;
+        line-height: 1.6;
     }
 
-    .teaching-card h3 {
-        font-size: 16px;
-    }
-
-    .teaching-card p {
-        font-size: 13px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .teaching-card {
-        flex: 0 0 85%;
+    /* Ensure spacing between blocks */
+    .about-text,
+    .director-content {
+        margin-bottom: 10px;
     }
 }

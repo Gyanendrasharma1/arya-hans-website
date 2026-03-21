@@ -1,0 +1,590 @@
+/* =========================
+   BREADCRUMB
+========================= */
+.jee-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    padding-top: 10px;
+    padding-left: 90px;
+}
+
+.jee-breadcrumb a {
+    text-decoration: none;
+    color: #104C80;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.jee-breadcrumb a:hover {
+    color: #0680A9;
+}
+
+.jee-breadcrumb span {
+    color: #888;
+}
+
+#breadcrumb-current {
+    color: #BC2F25;
+    font-weight: 600;
+}
+
+#jee-course {
+    padding-bottom: 50px;
+    padding: 10px 20px;
+}
+/* =========================
+   SWITCH BUTTON
+========================= */
+.jee-type-switch {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 25px;
+    background: #fff;
+    padding: 6px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.type-btn {
+    padding: 10px 22px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14.5px;
+    border-radius: 8px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.type-btn.active {
+    background: #104C80;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(16, 76, 128, 0.25);
+}
+
+.type-btn:hover {
+    color: #104C80;
+}
+
+/* =========================
+   ADVANCED SECTION BASE
+========================= */
+#advanced {
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+.jee-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.jee-header h2 {
+    font-size: 32px;
+    color: #104C80;
+    margin-bottom: 10px;
+}
+
+.jee-header p {
+    font-size: 15px;
+    color: #666;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PROGRAM BUTTONS
+========================= */
+.jee-programs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.jee-program {
+    padding: 10px 18px;
+    border: none;
+    background: #104C80;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 13.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.jee-program.active {
+    background: #BC2F25;
+    box-shadow: 0 6px 18px rgba(188, 47, 37, 0.3);
+}
+
+.jee-program:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(16, 76, 128, 0.25);
+}
+
+/* =========================
+   TABS WRAPPER (UPGRADED CARD)
+========================= */
+.jee-tabs {
+    max-width: 780px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 26px;
+    box-shadow: 0 20px 45px rgba(16, 76, 128, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(6, 128, 169, 0.08);
+}
+
+.jee-tabs:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 55px rgba(16, 76, 128, 0.12);
+}
+
+
+/* =========================
+   TAB BUTTONS (MODERN STYLE)
+========================= */
+.jee-tab-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 1px solid #eef2f7;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.tab-btn {
+    padding: 9px 16px;
+    border: none;
+    background: rgba(6, 128, 169, 0.08);
+    cursor: pointer;
+    font-size: 13.5px;
+    color: #555;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* subtle glow on hover */
+.tab-btn:hover {
+    background: rgba(6, 128, 169, 0.15);
+    color: #104C80;
+    transform: translateY(-2px);
+}
+
+/* ACTIVE STATE */
+.tab-btn.active {
+    background: linear-gradient(135deg, #104C80, #0680A9);
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 8px 18px rgba(16, 76, 128, 0.25);
+}
+
+
+/* =========================
+   TAB CONTENT (PREMIUM TEXT)
+========================= */
+.jee-tab-content {
+    display: none;
+    padding-top: 12px;
+    animation: fadeInUp 0.4s ease;
+}
+
+.jee-tab-content.active {
+    display: block;
+}
+
+.jee-tab-content ul {
+    padding-left: 18px;
+}
+
+/* LIST ITEMS */
+.jee-tab-content li {
+    margin-bottom: 12px;
+    font-size: 14.5px;
+    color: #1a1a1a;
+    line-height: 1.6;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* custom bullet + hover */
+.jee-tab-content li::marker {
+    color: #0680A9;
+}
+
+.jee-tab-content li:hover {
+    color: #104C80;
+    transform: translateX(4px);
+}
+
+/* paragraph */
+.jee-tab-content p {
+    font-size: 14.5px;
+    color: #333;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   MAIN SECTION (JEE MAIN)
+========================= */
+#main {
+    animation: fadeIn 0.4s ease;
+}
+
+/* header same style but ensure consistency */
+#main .jee-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#main .jee-header h2 {
+    font-size: 28px;
+    color: #104C80;
+    margin-bottom: 8px;
+}
+
+#main .jee-header p {
+    font-size: 14.5px;
+    color: #555;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   OPTIONAL EMPTY STATE STYLE
+========================= */
+#main .jee-header p:empty::after {
+    content: "Content coming soon...";
+    color: #888;
+    font-style: italic;
+}
+
+
+/* =========================
+   FADE ANIMATION (if not added)
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TYPE CONTENT CONTROL */
+.jee-type-content {
+    display: none;
+}
+
+.jee-type-content.active {
+    display: block;
+}
+
+
+/* SECTION */
+#rs-methodologies {
+    padding: 70px 8%;
+    background: #f7f9fc;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 0px;
+    padding-bottom: 35px;
+}
+
+.rs-method-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* HEADER */
+.rs-method-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rs-method-header h2 {
+    font-size: 32px;
+    color: #104C80;
+    margin-bottom: 8px;
+}
+
+.rs-method-header p {
+    font-size: 15px;
+    color: #555;
+}
+
+/* LIST STYLE */
+.rs-method-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ITEM */
+.rs-method-item {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+/* CUSTOM BULLET */
+.rs-method-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background: #0680A9;
+    border-radius: 50%;
+}
+
+/* TITLE */
+.rs-method-item strong {
+    color: #104C80;
+    font-weight: 600;
+}
+
+/* DESCRIPTION */
+.rs-method-item span {
+    color: #555;
+    font-size: 14px;
+}
+
+/* HOVER (subtle) */
+.rs-method-item:hover::before {
+    background: #BC2F25;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .rs-method-header h2 {
+        font-size: 24px;
+    }
+
+    .rs-method-item {
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   TABLET (<= 768px)
+========================= */
+@media (max-width: 768px) {
+
+    /* Breadcrumb */
+    .jee-breadcrumb {
+        padding-left: 20px;
+        font-size: 14px;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    /* Switch Buttons */
+    .jee-type-switch {
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .type-btn {
+        flex: 1;
+        font-size: 13px;
+        padding: 8px 12px;
+        text-align: center;
+    }
+
+    /* Header */
+    .jee-header h2 {
+        font-size: 26px;
+    }
+
+    .jee-header p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* Program Buttons */
+    .jee-programs {
+        gap: 8px;
+    }
+
+    .jee-program {
+        font-size: 12.5px;
+        padding: 8px 14px;
+    }
+
+    /* Tabs Wrapper */
+    .jee-tabs {
+        padding: 18px 16px;
+        border-radius: 12px;
+    }
+
+    /* Tab Buttons */
+    .jee-tab-buttons {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+    }
+
+    .jee-tab-buttons::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab-btn {
+        white-space: nowrap;
+        font-size: 12.5px;
+        padding: 8px 12px;
+    }
+
+    /* Tab Content */
+    .jee-tab-content li {
+        font-size: 14px;
+    }
+
+    .jee-tab-content p {
+        font-size: 14px;
+    }
+
+    /* Teaching Method Section */
+    #rs-methodologies {
+        padding: 50px 5%;
+    }
+
+    .rs-method-header h2 {
+        font-size: 26px;
+    }
+
+    .rs-method-header p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .rs-method-item {
+        padding-left: 24px;
+    }
+}
+
+
+/* =========================
+   MOBILE (<= 480px)
+========================= */
+@media (max-width: 480px) {
+
+    /* Breadcrumb */
+    .jee-breadcrumb {
+        font-size: 13px;
+        padding-left: 15px;
+    }
+
+    /* Header */
+    .jee-header h2 {
+        font-size: 22px;
+    }
+
+    .jee-header p {
+        font-size: 13.5px;
+    }
+
+    /* Program Buttons -> full width */
+    .jee-programs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .jee-program {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Switch Buttons */
+    .type-btn {
+        font-size: 12.5px;
+        padding: 8px;
+    }
+
+    /* Tabs */
+    .jee-tabs {
+        padding: 16px 14px;
+    }
+
+    .tab-btn {
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+
+    /* Tab Content */
+    .jee-tab-content li {
+        font-size: 13.5px;
+    }
+
+    .jee-tab-content p {
+        font-size: 13.5px;
+    }
+
+    /* Teaching Methods */
+    .rs-method-header h2 {
+        font-size: 22px;
+    }
+
+    .rs-method-item {
+        margin-bottom: 14px;
+    }
+
+    .rs-method-item span {
+        font-size: 13.5px;
+    }
+}

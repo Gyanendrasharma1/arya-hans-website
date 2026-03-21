@@ -1,0 +1,165 @@
+/* =========================
+   BTS 360 SECTION
+========================= */
+
+.bts360-section {
+    padding: 0px 8%;
+    background: #f5f7fb;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bts360-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.bts360-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.bts360-header h2 {
+    font-size: 34px;
+    font-weight: 600;
+    color: #104C80;
+    position: relative;
+    display: inline-block;
+}
+
+/* underline animation */
+.bts360-header h2::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #BC2F25;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.4s ease;
+}
+
+.bts360-header h2:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   BLOCK CARD
+========================= */
+
+.bts360-block {
+    background: #ffffff;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+    border-left: 5px solid #0680A9;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.35s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+/* stagger animation */
+.bts360-block:nth-child(2) { animation-delay: 0.1s; }
+.bts360-block:nth-child(3) { animation-delay: 0.2s; }
+.bts360-block:nth-child(4) { animation-delay: 0.3s; }
+.bts360-block:nth-child(5) { animation-delay: 0.4s; }
+.bts360-block:nth-child(6) { animation-delay: 0.5s; }
+.bts360-block:nth-child(7) { animation-delay: 0.6s; }
+
+/* hover effect */
+.bts360-block:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border-left-color: #BC2F25;
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.bts360-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #104C80;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.bts360-block:hover .bts360-title {
+    color: #0680A9;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.bts360-text {
+    font-size: 15.5px;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* =========================
+   LIST
+========================= */
+
+.bts360-list {
+    padding-left: 18px;
+}
+
+.bts360-list li {
+    font-size: 15.5px;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    transition: transform 0.2s ease;
+}
+
+/* bullet color */
+.bts360-list li::marker {
+    color: #0680A9;
+}
+
+/* subtle hover on list items */
+.bts360-list li:hover {
+    transform: translateX(5px);
+    color: #104C80;
+}
+
+/* =========================
+   ANIMATION KEYFRAME
+========================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .bts360-section {
+        padding: 60px 5%;
+    }
+
+    .bts360-header h2 {
+        font-size: 26px;
+    }
+
+    .bts360-block {
+        padding: 22px;
+    }
+}

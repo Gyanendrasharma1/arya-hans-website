@@ -22,7 +22,7 @@ body {
 .topper-hero {
     height: 50vh;
     position: relative;
-    background: url('/assets/images/students/about\ banner.png') center/cover no-repeat;
+    background: url('file:///C:/Users/DELL/Desktop/arya-hans-website/assets/images/About/about-banner.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
