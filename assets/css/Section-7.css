@@ -3,9 +3,8 @@
 ========================= */
 
 #aei-reviews {
-    padding: 30px 0 50px;
+    padding: 40px 0 60px;
     background: #f7f9fc;
-    overflow: hidden;
 }
 
 /* =========================
@@ -14,92 +13,90 @@
 
 .aei-reviews-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .aei-reviews-header h2 {
     font-size: 32px;
     color: #BC2F25;
-    margin-bottom: 5px;
 }
 
-
 /* =========================
-   SLIDER
+   SLIDER WRAPPER (CENTERED WITH SPACE)
 ========================= */
 
 .aei-reviews-slider {
-    overflow: hidden;
     position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 60px; /* space for buttons */
 }
 
-/* moving track */
+/* =========================
+   VIEWPORT
+========================= */
+
+.aei-reviews-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* =========================
+   TRACK
+========================= */
 
 .aei-reviews-track {
     display: flex;
-    gap: 16px;
-    width: max-content;
-    animation: aei-scroll 30s linear infinite;
+    gap: 20px;
+    transition: transform 0.6s ease, opacity 0.4s ease;
 }
-
-/* pause on hover (desktop only useful) */
-
-.aei-reviews-slider:hover .aei-reviews-track {
-    animation-play-state: paused;
-}
-
-/* animation */
-
-@keyframes aei-scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
 
 /* =========================
-   CARD
+   CARD (SQUARE STYLE)
 ========================= */
 
+/* Desktop → 3 cards */
 .aei-review-card {
-    flex: 0 0 auto;
-    width: 250px;
+    flex: 0 0 calc((100% - 40px) / 3);
+    aspect-ratio: 1 / 1; /* square shape */
+    height: 220px;
+
     background: #fff;
-    padding: 18px;
-    border-radius: 12px;
+    padding: 20px;
+    border-radius: 14px;
     border: 1px solid rgba(0,0,0,0.05);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     transition: 0.3s ease;
 }
 
 .aei-review-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
-
 
 /* =========================
    CONTENT
 ========================= */
 
 .aei-review-top img {
-    width: 28px;
-    margin-bottom: 10px;
+    width: 32px;
 }
 
 .aei-review-card p {
-    font-size: 13px;
+    font-size: 14px;
     color: #5f6c7b;
     line-height: 1.6;
-    margin-bottom: 14px;
+    margin: 12px 0;
+    flex-grow: 1;
 }
 
 .aei-review-bottom h4 {
-    font-size: 14px;
-    margin-bottom: 4px;
+    font-size: 15px;
     color: #1f2d3d;
     font-weight: 600;
 }
@@ -109,101 +106,118 @@
     font-size: 13px;
 }
 
-
 /* =========================
-   TABLET (≤ 992px)
+   BUTTONS (OUTSIDE CARDS)
 ========================= */
+
+.aei-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 3;
+
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.aei-btn.prev {
+    left: 0;
+}
+
+.aei-btn.next {
+    right: 0;
+}
+
+.aei-btn:hover {
+    background: #BC2F25;
+    color: #fff;
+}
 
 @media (max-width: 992px) {
 
-    #aei-reviews {
-        padding: 25px 0 45px;
+    .aei-reviews-slider {
+        padding: 0 40px;
+    }
+
+    .aei-reviews-track {
+        gap: 16px; /* keep consistent gap */
+    }
+
+    .aei-review-card {
+        flex: 0 0 calc((100% - 16px) / 2);
+        max-width: calc((100% - 16px) / 2);
     }
 
     .aei-reviews-header h2 {
         font-size: 28px;
     }
+}
 
-    .aei-review-card {
-        width: 220px;
-        padding: 16px;
+/* =========================
+   TAB (≤ 992px)
+========================= */
+@media (max-width: 992px) {
+
+    .aei-reviews-slider {
+        padding: 0 30px;
+    }
+
+    .aei-reviews-viewport {
+        width: 100%;
+        overflow: hidden;
     }
 
     .aei-reviews-track {
-        animation-duration: 35s;
+        gap: 16px;
+    }
+
+    .aei-review-card {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .aei-reviews-header h2 {
+        font-size: 28px;
     }
 }
 
-
 /* =========================
-   MOBILE (≤ 768px)
+   Mobile  (≤ 768px)
 ========================= */
 
 @media (max-width: 768px) {
 
-    /* 🔥 switch to scroll mode */
     .aei-reviews-slider {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .aei-reviews-track {
-        animation: none; /* disable auto scroll */
-        padding: 0 5%;
+        padding: 0 30px;
     }
 
     .aei-review-card {
-        width: 200px;
-        scroll-snap-align: start;
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-height: 240px;
+        aspect-ratio: auto;
     }
-}
 
-
-/* =========================
-   SMALL MOBILE (≤ 576px)
-========================= */
-
-@media (max-width: 576px) {
-
-    #aei-reviews {
-        padding: 20px 0 40px;
+    .aei-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
     }
 
     .aei-reviews-header h2 {
         font-size: 24px;
     }
-
-    .aei-review-card {
-        width: 180px;
-        padding: 14px;
-    }
-
-    .aei-review-card p {
-        font-size: 12.5px;
-    }
-
-    .aei-review-bottom h4 {
-        font-size: 13px;
-    }
-
-    .aei-stars {
-        font-size: 12px;
-    }
 }
 
 
 /* =========================
-   EXTRA SMALL (≤ 400px)
+   SMALL MOBILE
 ========================= */
 
-@media (max-width: 400px) {
-
-    .aei-review-card {
-        width: 160px;
-    }
-
-    .aei-reviews-header h2 {
-        font-size: 22px;
-    }
-}

@@ -16,7 +16,6 @@ body {
     max-width: 1200px;
     margin: 15px auto 20px;
     padding: 10px 16px;
-    background: rgba(6, 128, 169, 0.06);
     border-radius: 6px;
 }
 
@@ -32,7 +31,7 @@ body {
 
 .aei-adv-breadcrumb-item a {
     text-decoration: none;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 500;
     color: #0680A9;
     transition: color 0.25s ease;
@@ -59,7 +58,7 @@ body {
 ========================= */
 
 #aei-adv-syllabus {
-    padding: 50px 6%;
+    padding: 10px 6%;
     background: #f7f9fc;
 }
 

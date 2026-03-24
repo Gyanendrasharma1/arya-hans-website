@@ -1,0 +1,252 @@
+/* ===============================
+   LAYOUT
+=============================== */
+.jee-layout {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* ===============================
+   LEFT SIDE
+=============================== */
+.jee-left {
+    flex: 2;
+    margin-top: 40px;
+}
+
+/* ===============================
+   RIGHT SIDE (FORM CARD)
+=============================== */
+.jee-right-form {
+    flex: 1;
+    position: sticky;
+    top: 100px;
+    margin-top: 90px;
+
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+
+    border-top: 4px solid #BC2F25;
+
+    transition: all 0.35s ease;
+}
+
+/* hover lift */
+.jee-right-form:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   FORM HEADER
+=============================== */
+.jee-right-form h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #111;
+}
+
+.jee-right-form p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* ===============================
+   INPUT FIELDS
+=============================== */
+.jee-right-form input,
+.jee-right-form select,
+.jee-right-form textarea {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 15px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-family: inherit;
+
+    background: #f9fafb;
+
+    transition: all 0.3s ease;
+}
+
+/* placeholder */
+.jee-right-form input::placeholder,
+.jee-right-form textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* focus effect */
+.jee-right-form input:focus,
+.jee-right-form select:focus,
+.jee-right-form textarea:focus {
+    border-color: #104C80;
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(16, 76, 128, 0.1);
+
+    outline: none;
+}
+
+/* hover effect */
+.jee-right-form input:hover,
+.jee-right-form select:hover,
+.jee-right-form textarea:hover {
+    border-color: #BC2F25;
+}
+
+/* textarea */
+.jee-right-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ===============================
+   BUTTON (GRADIENT + PREMIUM)
+=============================== */
+.jee-right-form button {
+    width: 100%;
+    padding: 14px;
+
+    background: linear-gradient(135deg, #104C80, #BC2F25);
+    color: #ffffff;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+}
+
+/* hover */
+.jee-right-form button:hover {
+    background: linear-gradient(135deg, #0c3b63, #9f2720);
+    transform: translateY(-2px) scale(1.01);
+
+    box-shadow: 0 12px 30px rgba(188, 47, 37, 0.35);
+}
+
+/* active */
+.jee-right-form button:active {
+    transform: scale(0.97);
+}
+
+/* ===============================
+   SELECT CUSTOM ARROW
+=============================== */
+.jee-right-form select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #555 50%),
+                      linear-gradient(135deg, #555 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(50% - 3px),
+                         calc(100% - 13px) calc(50% - 3px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+
+/* ===============================
+   MICRO INTERACTION (SUBTLE GLOW)
+=============================== */
+.jee-right-form:focus-within {
+    box-shadow: 0 20px 60px rgba(16, 76, 128, 0.15);
+}
+
+/* ===============================
+   OPTIONAL NOTE TEXT
+=============================== */
+.form-note {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ===============================
+   TABLET (<= 992px)
+=============================== */
+@media (max-width: 992px) {
+
+    .jee-layout {
+        gap: 30px;
+    }
+
+    .jee-left {
+        flex: 1.6;
+        margin-top: 20px;
+    }
+
+    .jee-right-form {
+        flex: 1;
+        margin-top: 60px;
+        padding: 24px;
+    }
+}
+
+
+/* ===============================
+   MOBILE (<= 768px)
+=============================== */
+@media (max-width: 768px) {
+
+    .jee-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .jee-left {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .jee-right-form {
+        width: 100%;
+        position: relative; /* sticky remove */
+        top: unset;
+        margin-top: 20px;
+    }
+}
+
+
+/* ===============================
+   SMALL MOBILE (<= 480px)
+=============================== */
+@media (max-width: 480px) {
+
+    .jee-right-form {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .jee-right-form h3 {
+        font-size: 18px;
+    }
+
+    .jee-right-form p {
+        font-size: 13px;
+    }
+
+    .jee-right-form input,
+    .jee-right-form select,
+    .jee-right-form textarea {
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+
+    .jee-right-form button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

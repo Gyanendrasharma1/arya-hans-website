@@ -13,11 +13,10 @@ body {
 ========================= */
 
 .aei-syl-breadcrumb {
-    max-width: 1200px;
+        
     margin: 15px auto 20px; /* reduced top-bottom */
-    padding: 10px 16px;
-    background: rgba(6, 128, 169, 0.06);
-    border-radius: 6px;
+    padding: 10px 80px;
+
 }
 
 .aei-syl-breadcrumb-list {
@@ -32,7 +31,7 @@ body {
 
 .aei-syl-breadcrumb-item a {
     text-decoration: none;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 500;
     color: #0680A9;
     transition: color 0.25s ease;
@@ -43,12 +42,12 @@ body {
 }
 
 .aei-syl-breadcrumb-separator {
-    font-size: 12px;
+    font-size: 16px;
     color: #64748b;
 }
 
 .aei-syl-breadcrumb-item.active {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     color: #BC2F25;
 }
@@ -59,8 +58,10 @@ body {
 ========================= */
 
 #aei-syllabus-main {
-    padding: 50px 6%; /* reduced vertical + side */
+    padding: 0px; /* reduced vertical + side */
+    margin-top: -10px;
     background: #f7f9fc;
+    padding-bottom: 20px;
 }
 
 .aei-syllabus-container {

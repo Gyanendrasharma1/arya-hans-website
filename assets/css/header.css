@@ -34,6 +34,12 @@ body {
     transition: .3s;
 }
 
+.aei-contact a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: .3s;
+}
 /* ENQUIRY BUTTON */
 
 .aei-enquiry {
@@ -58,6 +64,7 @@ body {
     width: 100%;
     z-index: 9999;
     background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
 

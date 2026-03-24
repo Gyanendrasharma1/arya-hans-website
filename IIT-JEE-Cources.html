@@ -12,6 +12,7 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="./assets/css/courses.css">
+    <link rel="stylesheet" href="./assets/css/Forms.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/Counter.css">
     <link rel="stylesheet" href="./assets/css/Section-2.css">
@@ -22,16 +23,13 @@
     <link rel="stylesheet" href="./assets/css/Top-ran.css">
     <link rel="stylesheet" href="./assets/css/about.css">
     <link rel="stylesheet" href="./assets/css/Section-7.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/pages.css">
     <link rel="stylesheet" href="./assets/css/header.css">
 </head>
 
 <body>
 
-     <header id="aei-header">
+    <header id="aei-header">
 
         <!-- TOP BAR -->
         <div class="aei-topbar">
@@ -84,7 +82,7 @@
                                 <li><a href="IIT-JEE-Cources.html">IIT-JEE (Advanced + Main)</a></li>
                                 <li><a href="NEET.html">NEET-UG</a></li>
                                 <li><a href="UPTU.html">UPTU / GBTU</a></li>
-                                <li><a href="Foundation.html">Foundation</a></li>
+                                <li><a href="#">Foundation</a></li>
                                 <li><a href="BTS-360.html">Bts-360</a></li>
                             </ul>
                         </li>
@@ -118,245 +116,291 @@
 
             <div class="jee-container">
 
-                <!-- =========================
+
+                <!-- ADD THIS WRAPPER -->
+                <div class="jee-layout">
+
+                    <!-- LEFT CONTENT (NO CHANGE INSIDE) -->
+                    <div class="jee-left">
+
+                        <!-- =========================
              BREADCRUMB
         ========================= -->
-                <nav class="jee-breadcrumb">
-                    <a href="index.html">Home</a>
-                    <span>›</span>
-                    <a href="#">Courses</a>
-                    <span>›</span>
-                    <span id="breadcrumb-current">IIT JEE-Advanced</span>
-                </nav>
+                        <nav class="jee-breadcrumb">
+                            <a href="index.html">Home</a>
+                            <span>›</span>
+                            <a href="#">Courses</a>
+                            <span>›</span>
+                            <span id="breadcrumb-current">IIT JEE-Advanced</span>
+                        </nav>
 
 
-                <!-- =========================
+                        <!-- =========================
              MAIN / ADVANCED SWITCH
         ========================= -->
-                <div class="jee-type-switch">
-                    <button class="type-btn active" data-type="advanced">JEE Advanced</button>
-                    <button class="type-btn" data-type="main">JEE Main</button>
-                </div>
+                        <div class="jee-type-switch">
+                            <button class="type-btn active" data-type="advanced">JEE Advanced</button>
+                            <button class="type-btn" data-type="main">JEE Main</button>
+                        </div>
 
 
-                <!-- =========================
+                        <!-- =========================
      JEE ADVANCED CONTENT
 ========================= -->
-                <div class="jee-type-content active" id="advanced">
+                        <div class="jee-type-content active" id="advanced">
 
-                    <!-- HEADER -->
-                    <div class="jee-header">
-                        <h2>IIT JEE Advanced Program</h2>
-                        <p>
-                            Designed for aspirants targeting top ranks in IIT JEE Advanced.
-                            This program focuses on deep conceptual clarity, advanced problem-solving,
-                            and strategic exam preparation for top IIT selections.
-                        </p>
-                    </div>
+                            <!-- HEADER -->
+                            <div class="jee-header">
+                                <h2>IIT JEE Advanced Program</h2>
+                                <p>
+                                    Designed for aspirants targeting top ranks in IIT JEE Advanced.
+                                    This program focuses on deep conceptual clarity, advanced problem-solving,
+                                    and strategic exam preparation for top IIT selections.
+                                </p>
+                            </div>
 
-                    <!-- PROGRAM OPTIONS -->
-                    <div class="jee-programs">
-                        <button class="jee-program active">Foundation Program</button>
-                        <button class="jee-program">Rank Booster</button>
-                        <button class="jee-program">Target Batch</button>
-                        <button class="jee-program">Elite Batch</button>
-                    </div>
+                            
+                            <!-- TABS -->
+                            <div class="jee-tabs">
 
-                    <!-- TABS -->
-                    <div class="jee-tabs">
+                                <!-- TAB BUTTONS -->
+                                <div class="jee-tab-buttons">
+                                    <button class="tab-btn active" data-tab="adv-features">Features</button>
+                                    <button class="tab-btn" data-tab="adv-highlights">Highlights</button>
+                                    <button class="tab-btn" data-tab="adv-eligibility">Eligibility</button>
+                                    <button class="tab-btn" data-tab="adv-duration">Duration</button>
+                                    <button class="tab-btn" data-tab="adv-schedule">Schedule</button>
+                                </div>
 
-                        <!-- TAB BUTTONS -->
-                        <div class="jee-tab-buttons">
-                            <button class="tab-btn active" data-tab="adv-features">Features</button>
-                            <button class="tab-btn" data-tab="adv-highlights">Highlights</button>
-                            <button class="tab-btn" data-tab="adv-eligibility">Eligibility</button>
-                            <button class="tab-btn" data-tab="adv-duration">Duration</button>
-                            <button class="tab-btn" data-tab="adv-schedule">Schedule</button>
+                                <!-- FEATURES -->
+                                <div class="jee-tab-content active" id="adv-features">
+                                    <ul>
+                                        <li>Mentorship by IIT alumni and experienced faculty</li>
+                                        <li>Advanced level study material with concept depth</li>
+                                        <li>Daily problem practice sheets (DPP)</li>
+                                        <li>Chapter-wise and full syllabus test series</li>
+                                        <li>Detailed performance analytics and rank tracking</li>
+                                        <li>Dedicated doubt-solving sessions (online + offline)</li>
+                                    </ul>
+                                </div>
+
+                                <!-- HIGHLIGHTS -->
+                                <div class="jee-tab-content" id="adv-highlights">
+                                    <ul>
+                                        <li>Complete coverage of Physics, Chemistry & Mathematics</li>
+                                        <li>High-level problem-solving sessions</li>
+                                        <li>Previous year questions (PYQ) focused training</li>
+                                        <li>Personal mentorship for rank improvement</li>
+                                        <li>Time management & exam strategy sessions</li>
+                                    </ul>
+                                </div>
+
+                                <!-- ELIGIBILITY -->
+                                <div class="jee-tab-content" id="adv-eligibility">
+                                    <ul>
+                                        <li>Students of Class 11 & 12 (Science stream)</li>
+                                        <li>Droppers preparing for IIT JEE Advanced</li>
+                                        <li>Students targeting top IIT ranks</li>
+                                    </ul>
+                                </div>
+
+                                <!-- DURATION -->
+                                <div class="jee-tab-content" id="adv-duration">
+                                    <p>
+                                        Program duration ranges from 1 to 2 years depending on batch selection.
+                                        Crash courses of 2–3 months are also available for revision.
+                                    </p>
+                                </div>
+
+                                <!-- SCHEDULE -->
+                                <div class="jee-tab-content" id="adv-schedule">
+                                    <ul>
+                                        <li>Regular Batch: 5 days/week (3–4 hours/day)</li>
+                                        <li>Weekend Batch: 6–7 hours (Saturday & Sunday)</li>
+                                        <li>Crash Course: Daily intensive sessions (2–3 months)</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
                         </div>
 
-                        <!-- FEATURES -->
-                        <div class="jee-tab-content active" id="adv-features">
-                            <ul>
-                                <li>Mentorship by IIT alumni and experienced faculty</li>
-                                <li>Advanced level study material with concept depth</li>
-                                <li>Daily problem practice sheets (DPP)</li>
-                                <li>Chapter-wise and full syllabus test series</li>
-                                <li>Detailed performance analytics and rank tracking</li>
-                                <li>Dedicated doubt-solving sessions (online + offline)</li>
-                            </ul>
-                        </div>
-
-                        <!-- HIGHLIGHTS -->
-                        <div class="jee-tab-content" id="adv-highlights">
-                            <ul>
-                                <li>Complete coverage of Physics, Chemistry & Mathematics</li>
-                                <li>High-level problem-solving sessions</li>
-                                <li>Previous year questions (PYQ) focused training</li>
-                                <li>Personal mentorship for rank improvement</li>
-                                <li>Time management & exam strategy sessions</li>
-                            </ul>
-                        </div>
-
-                        <!-- ELIGIBILITY -->
-                        <div class="jee-tab-content" id="adv-eligibility">
-                            <ul>
-                                <li>Students of Class 11 & 12 (Science stream)</li>
-                                <li>Droppers preparing for IIT JEE Advanced</li>
-                                <li>Students targeting top IIT ranks</li>
-                            </ul>
-                        </div>
-
-                        <!-- DURATION -->
-                        <div class="jee-tab-content" id="adv-duration">
-                            <p>
-                                Program duration ranges from 1 to 2 years depending on batch selection.
-                                Crash courses of 2–3 months are also available for revision.
-                            </p>
-                        </div>
-
-                        <!-- SCHEDULE -->
-                        <div class="jee-tab-content" id="adv-schedule">
-                            <ul>
-                                <li>Regular Batch: 5 days/week (3–4 hours/day)</li>
-                                <li>Weekend Batch: 6–7 hours (Saturday & Sunday)</li>
-                                <li>Crash Course: Daily intensive sessions (2–3 months)</li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </div>
 
 
-
-                <!-- =========================
+                        <!-- =========================
      JEE MAIN CONTENT
 ========================= -->
-                <div class="jee-type-content" id="main">
+                        <div class="jee-type-content" id="main">
 
-                    <!-- HEADER -->
-                    <div class="jee-header">
-                        <h2>IIT JEE Main Program</h2>
-                        <p>
-                            The JEE Main program at RS Institute is strategically designed to build strong
-                            conceptual foundations in Physics, Chemistry, and Mathematics. It helps students
-                            develop speed, accuracy, and exam confidence required to secure top ranks and
-                            admissions into leading NITs, IIITs, and other engineering colleges.
-                        </p>
-                    </div>
+                            <!-- HEADER -->
+                            <div class="jee-header">
+                                <h2>IIT JEE Main Program</h2>
+                                <p>
+                                    The JEE Main program at RS Institute is strategically designed to build strong
+                                    conceptual foundations in Physics, Chemistry, and Mathematics. It helps students
+                                    develop speed, accuracy, and exam confidence required to secure top ranks and
+                                    admissions into leading NITs, IIITs, and other engineering colleges.
+                                </p>
+                            </div>
 
-                    <!-- PROGRAM OPTIONS -->
-                    <div class="jee-programs">
-                        <button class="jee-program active">Foundation Program</button>
-                        <button class="jee-program">Rank Booster</button>
-                        <button class="jee-program">Target Batch</button>
-                        <button class="jee-program">Elite Batch</button>
-                    </div>
+                        
 
-                    <!-- TABS -->
-                    <div class="jee-tabs">
+                            <!-- TABS -->
+                            <div class="jee-tabs">
 
-                        <!-- TAB BUTTONS -->
-                        <div class="jee-tab-buttons">
-                            <button class="tab-btn active" data-tab="main-features">Features</button>
-                            <button class="tab-btn" data-tab="main-highlights">Highlights</button>
-                            <button class="tab-btn" data-tab="main-eligibility">Eligibility</button>
-                            <button class="tab-btn" data-tab="main-duration">Duration</button>
-                            <button class="tab-btn" data-tab="main-schedule">Schedule</button>
+                                <!-- TAB BUTTONS -->
+                                <div class="jee-tab-buttons">
+                                    <button class="tab-btn active" data-tab="main-features">Features</button>
+                                    <button class="tab-btn" data-tab="main-highlights">Highlights</button>
+                                    <button class="tab-btn" data-tab="main-eligibility">Eligibility</button>
+                                    <button class="tab-btn" data-tab="main-duration">Duration</button>
+                                    <button class="tab-btn" data-tab="main-schedule">Schedule</button>
+                                </div>
+
+                                <!-- FEATURES -->
+                                <div class="jee-tab-content active" id="main-features">
+                                    <ul>
+                                        <li>Guidance from experienced faculty and IIT-qualified mentors</li>
+                                        <li>Structured study material with concept clarity and practice sets</li>
+                                        <li>Flexible learning modes for better student convenience</li>
+                                        <li>Regular mock tests designed to match real exam patterns</li>
+                                        <li>Performance analysis with detailed feedback and improvement tracking</li>
+                                    </ul>
+                                </div>
+
+                                <!-- HIGHLIGHTS -->
+                                <div class="jee-tab-content" id="main-highlights">
+                                    <ul>
+                                        <li>Complete syllabus coverage aligned with JEE Main pattern</li>
+                                        <li>Topic-wise tests along with full-length mock exams</li>
+                                        <li>Focused training on speed, accuracy, and time management</li>
+                                        <li>Personalized mentorship for academic growth and strategy</li>
+                                    </ul>
+                                </div>
+
+                                <!-- ELIGIBILITY -->
+                                <div class="jee-tab-content" id="main-eligibility">
+                                    <ul>
+                                        <li>Students currently studying in Class 11 or 12</li>
+                                        <li>Students who have completed Class 12</li>
+                                        <li>Aspirants aiming for JEE Main and engineering admissions</li>
+                                    </ul>
+                                </div>
+
+                                <!-- DURATION -->
+                                <div class="jee-tab-content" id="main-duration">
+                                    <p>
+                                        The program duration ranges from 1 to 2 years depending on the selected course.
+                                        Short-term crash courses are also available for revision and final preparation.
+                                    </p>
+                                </div>
+
+                                <!-- SCHEDULE -->
+                                <div class="jee-tab-content" id="main-schedule">
+                                    <ul>
+                                        <li>Regular Batch: 5 days a week (3–4 hours per day)</li>
+                                        <li>Weekend Batch: Extended sessions on Saturdays and Sundays</li>
+                                        <li>Crash Course: Intensive daily classes for 2–3 months</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
                         </div>
+   </div>
+                        <!-- RIGHT FORM (NEW ADDITION ONLY) -->
+                        <aside class="jee-right-form">
 
-                        <!-- FEATURES -->
-                        <div class="jee-tab-content active" id="main-features">
-                            <ul>
-                                <li>Guidance from experienced faculty and IIT-qualified mentors</li>
-                                <li>Structured study material with concept clarity and practice sets</li>
-                                <li>Flexible learning modes for better student convenience</li>
-                                <li>Regular mock tests designed to match real exam patterns</li>
-                                <li>Performance analysis with detailed feedback and improvement tracking</li>
-                            </ul>
-                        </div>
+                            <h3>Book Free Counselling</h3>
+                            <p>Fill the form and our team will contact you within 24 hours.</p>
 
-                        <!-- HIGHLIGHTS -->
-                        <div class="jee-tab-content" id="main-highlights">
-                            <ul>
-                                <li>Complete syllabus coverage aligned with JEE Main pattern</li>
-                                <li>Topic-wise tests along with full-length mock exams</li>
-                                <li>Focused training on speed, accuracy, and time management</li>
-                                <li>Personalized mentorship for academic growth and strategy</li>
-                            </ul>
-                        </div>
+                            <form>
 
-                        <!-- ELIGIBILITY -->
-                        <div class="jee-tab-content" id="main-eligibility">
-                            <ul>
-                                <li>Students currently studying in Class 11 or 12</li>
-                                <li>Students who have completed Class 12</li>
-                                <li>Aspirants aiming for JEE Main and engineering admissions</li>
-                            </ul>
-                        </div>
+                                <input type="text" placeholder="Full Name" required>
+                                <input type="tel" placeholder="Mobile Number" required>
+                                <input type="email" placeholder="Email Address" required>
 
-                        <!-- DURATION -->
-                        <div class="jee-tab-content" id="main-duration">
-                            <p>
-                                The program duration ranges from 1 to 2 years depending on the selected course.
-                                Short-term crash courses are also available for revision and final preparation.
-                            </p>
-                        </div>
+                                <select required>
+                                    <option value="">Select Course</option>
+                                    <option>IIT-JEE (Main + Advanced)</option>
+                                    <option>NEET-UG</option>
+                                    <option>UPTU / GBTU</option>
+                                    <option>Foundation (Class 9-10)</option>
+                                    <option>BTS-360</option>
+                                </select>
 
-                        <!-- SCHEDULE -->
-                        <div class="jee-tab-content" id="main-schedule">
-                            <ul>
-                                <li>Regular Batch: 5 days a week (3–4 hours per day)</li>
-                                <li>Weekend Batch: Extended sessions on Saturdays and Sundays</li>
-                                <li>Crash Course: Intensive daily classes for 2–3 months</li>
-                            </ul>
-                        </div>
+                                <select required>
+                                    <option value="">Select Class</option>
+                                    <option>Class 9</option>
+                                    <option>Class 10</option>
+                                    <option>Class 11</option>
+                                    <option>Class 12</option>
+                                    <option>Dropper</option>
+                                </select>
 
-                    </div>
+                                <input type="text" placeholder="City / Location" required>
 
+                                <select>
+                                    <option value="">Preferred Mode</option>
+                                    <option>Offline Classroom</option>
+                                    <option>Online Live</option>
+                                    <option>Hybrid</option>
+                                </select>
+
+                                <textarea placeholder="Your Message (Optional)"></textarea>
+
+                                <button type="submit">Request Call Back</button>
+
+                            </form>
+
+                        </aside>
+
+                    </div> <!-- END LAYOUT -->
+
+        
                 </div>
         </section>
 
 
-<section id="rs-methodologies">
-    <div class="rs-method-container">
+        <section id="rs-methodologies">
+            <div class="rs-method-container">
 
-        <div class="rs-method-header">
-            <h2>Teaching Methodologies</h2>
-            <p>Our structured approach ensures clarity, engagement, and consistent academic progress.</p>
-        </div>
+                <div class="rs-method-header">
+                    <h2>Teaching Methodologies</h2>
+                    <p>Our structured approach ensures clarity, engagement, and consistent academic progress.</p>
+                </div>
 
-        <ul class="rs-method-list">
+                <ul class="rs-method-list">
 
-            <li class="rs-method-item">
-                <strong>Strong Fundamentals Focus :</strong>
-                <span> Emphasis on building clear and in-depth understanding of core concepts.</span>
-            </li>
+                    <li class="rs-method-item">
+                        <strong>Strong Fundamentals Focus :</strong>
+                        <span> Emphasis on building clear and in-depth understanding of core concepts.</span>
+                    </li>
 
-            <li class="rs-method-item">
-                <strong>Engaging Learning Experience :</strong>
-                <span> Interactive teaching methods supported by practical and real-life examples.</span>
-            </li>
+                    <li class="rs-method-item">
+                        <strong>Engaging Learning Experience :</strong>
+                        <span> Interactive teaching methods supported by practical and real-life examples.</span>
+                    </li>
 
-            <li class="rs-method-item">
-                <strong>Structured Progression :</strong>
-                <span> Systematic approach moving from basic principles to advanced problem-solving.</span>
-            </li>
+                    <li class="rs-method-item">
+                        <strong>Structured Progression :</strong>
+                        <span> Systematic approach moving from basic principles to advanced problem-solving.</span>
+                    </li>
 
-            <li class="rs-method-item">
-                <strong>Regular Doubt Support :</strong>
-                <span> Continuous doubt-clearing sessions to ensure clarity at every stage.</span>
-            </li>
+                    <li class="rs-method-item">
+                        <strong>Regular Doubt Support :</strong>
+                        <span> Continuous doubt-clearing sessions to ensure clarity at every stage.</span>
+                    </li>
 
-            <li class="rs-method-item">
-                <strong>Smart Preparation Strategy :</strong>
-                <span> Focus on important topics with optimized study planning for better results.</span>
-            </li>
+                    <li class="rs-method-item">
+                        <strong>Smart Preparation Strategy :</strong>
+                        <span> Focus on important topics with optimized study planning for better results.</span>
+                    </li>
 
-        </ul>
+                </ul>
 
-    </div>
-</section>
+            </div>
+        </section>
 
 
 
@@ -389,7 +433,7 @@
             <div class="footer-col">
                 <h4 class="footer-heading">Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./topper.html">Top Rankers</a></li>
                     <li><a href="#">Contact Us</a></li>
@@ -400,9 +444,8 @@
             <div class="footer-col">
                 <h4 class="footer-heading">Courses</h4>
                 <ul class="footer-links">
-                    <li><a href="#">IIT-JEE</a></li>
-                    <li><a href="#">UPSEE</a></li>
-                    <li><a href="#">NTSE</a></li>
+                    <li><a href="IIT-JEE-Cources.html">IIT-JEE</a></li>
+                    <li><a href="NEET.html">NEET-UG</a></li>
                     <li><a href="#">National Olympiad</a></li>
                     <li><a href="#">Daily Practice Paper</a></li>
                 </ul>
@@ -452,25 +495,22 @@
 
     <!-- MAIN JS -->
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/Hero.js"></script>
-    <script src="./assets/js/counter.js"></script>
-    <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/IIT-JEE.js"></script>
-    <script src="./assets/js/dropdown.js"></script>
-     <script>
-const header = document.querySelector(".aei-main-header");
-const topbar = document.querySelector(".aei-topbar");
 
-const triggerPoint = topbar.offsetHeight;
+    <script>
+        const header = document.querySelector(".aei-main-header");
+        const topbar = document.querySelector(".aei-topbar");
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > triggerPoint) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
-});
-</script>
+        const triggerPoint = topbar.offsetHeight;
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > triggerPoint) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        });
+    </script>
 </body>
 
 </html>
